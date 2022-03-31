@@ -1,8 +1,10 @@
 <br>
 
-# K8s 클러스터 환경에서 Kafka,EFK,Grafana 빅데이터 구축 및 분석  
+# K8s 클러스터 환경에서 Kafka,EFK,Grafana를 활용한 빅데이터 구축 및 데이터 분석  
 
 <br>
+## **클러스터 환경**
++ Cpu i7, Ram 16g, Hdd 500g x 4 PC(Total Cpu:32 Core, Ram:64g, hdd:2TB)
 
 ## **개발환경**
 + Ubuntu :18.04
@@ -17,7 +19,7 @@
 <br>
 
 ## **사용 기술**
- ### **언어**
+ ### **프로그래밍 언어**
   + Python(3.9)
  
  ### **프로그램**
@@ -28,7 +30,7 @@
   + ingress-nginx/controller :v1.0.0
   + Metallb :v0.9.3
   + Kafka :3.1.0
-  + Fluentd
+  + Fluentd :4.3
   + ElasticSearch :7.17.1
   + Kibana :7.17.1
   + Prometheus :2.27.1
@@ -42,7 +44,7 @@
   + Python(3.9)
   + Django
   + DJango ORM
-  + APACHE
+  + APACHE 
      
  ### **저장소**
   + ElasticSearch
@@ -59,8 +61,8 @@
   + EFK
   + REST API
   + Git 관리
-  + prometheus:2.27.1 & grafana:8.0.3,   cpu : 2, mem : 4, hdd : 20g, VM 1대에 같이 운영
-  + node_exporter:1.1.2 각 node pc에 1개씩 설치.
+  + Prometheus&grafana 
+  + 
 <br>
 
   ## **구현 기능**
