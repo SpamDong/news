@@ -8,9 +8,11 @@
 + Cpu i7, Ram 16g, Hdd 500g x 4 PC(Total Cpu:32 Core, Ram:64g, hdd:2TB)
 
 ## **개발환경**
-+ Ubuntu :18.04
++ VM-ware workstarion pro 16
++ Ubuntu :18.04 
 + Kubernetes(k8s) :v1.23.5
 + Containerd :1.5.10
++ Docker :20.10.14
 + AWS EC2(Crawler)
 + PyCham Community(2021)
 + GitHub
@@ -37,17 +39,18 @@
   + Prometheus :2.27.1
   + Grafana :8.0.3
   + Node_exporter 1.1.2
-  + hadoop(HDFS) :3.2.2 - 추가 업데이트 중
-  + spark :3.1.3 - 추가 업데이트 중
-  + apache zeppelin :0.8.0 - 추가 업데이트 중
+  + Hadoop(HDFS) :3.2.2 - 추가 업데이트 중
+  + Spark :3.1.3 - 추가 업데이트 중
+  + Apache zeppelin :0.8.0 - 추가 업데이트 중
+  + Cloud craft
   
  ### **백엔드**   
   + Python(3.9)
   + Django
   + DJango ORM
-  + APACHE 
+  + APACHE :2.4.29(ubuntu)
      
- ### **저장소**
+ ### **저장 환경**
   + ElasticSearch
   + Hadoop(HDFS) - 추가 업데이트 중
   
@@ -58,11 +61,13 @@
 <br>
 
   ## **주요 키워드**
+  + Clustering
   + Kubernetes(k8s) x Contaierd
-  + EFK
-  + REST API
-  + Git 관리
+  + EFK(elasticsearch + fluentd + kibana)
+  + Kafka
   + Prometheus&grafana 
+  + RealTime Crawling
+  + Git 관리   
   + 
 <br>
 
