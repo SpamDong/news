@@ -71,31 +71,33 @@
   + 
 <br>
 
-  ## **구현 기능**
-  + **user app**
-    + 회원가입/회원탈퇴 로직
-    + 로그인/로그아웃 로직 + 소셜네트워크 로그인
-    + 회원수정/암호변경/ID찾기
-    + 이메일인증
-     
-  + **hplace app**
-    + 게시글 작성/수정/삭제    
-    + 각 상점 위치 GPS 지도
-    + 실시간 날씨 api
-    + 실시간 누적방문자 api
+  ## **시스템 흐름도**
+  ![Team2 구성도02](https://user-images.githubusercontent.com/96184680/160989594-d9668050-a350-4fdc-ad97-fc9f4d98c7ee.png)
+
+<br>
+  
+  ## **데이터 파이프라인**
+  + **쿠버네티스 환경** : 쿠버네티스 클러스터 환경을 구축, Deployment (Pod, ReplicaSet, Volume), Service(LoadBalancer, Cluster IP) 
+     <br>
+       
+  + **Crawling DATA**
+    + EC2 -> 카프카 -> 플루언티드 -> 엘라스틱서치 -> 키바나    
+    + 파이썬 코드를 사용하여 인터넷 뉴스에서 원하는 데이터로 수집 및 정제 -> 카프카 -> 플루언디트를 통해 엘라스틱서치에 저장, 키바나로 시각화
+    <br> 
    
-  + **comments app**
+   
+  + **LOG DATA**
     + 코멘트 작성/삭제
   
   <br><br>
   
   ## **시스템 흐름도**
-  ![ERD_Model](https://user-images.githubusercontent.com/81276472/151469688-7c1f00ef-6bb5-459f-9508-e2772d3a0d62.png)
+  ![Team2 구성도02](https://user-images.githubusercontent.com/96184680/160989594-d9668050-a350-4fdc-ad97-fc9f4d98c7ee.png)
   
   
-  ## **ERD 구조**
+  ## **파이프라인 구조**
 
-  ![ERD](https://user-images.githubusercontent.com/81276472/151470158-a2161d09-be33-4dea-aa36-bb28f9252cd5.png)
+
   
   <br><br>
   
