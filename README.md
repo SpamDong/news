@@ -3,6 +3,7 @@
 # K8s 클러스터 환경에서 Kafka,EFK,Grafana를 활용한 빅데이터 구축 및 데이터 분석  
 
 <br>
+
 ## **클러스터 환경**
 + Cpu i7, Ram 16g, Hdd 500g x 4 PC(Total Cpu:32 Core, Ram:64g, hdd:2TB)
 
