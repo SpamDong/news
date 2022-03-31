@@ -3,7 +3,14 @@
 # K8s 클러스터 환경에서 Kafka,EFK,Grafana를 활용한 빅데이터 구축 및 데이터 분석  
 
 <br>
+## **클러스터 환경**
++ 주제 :  K8S를 활용한 NEWS 실시간 순위 및 이슈 분석
++ 네이버 뉴스에서 실시간, 대용량 데이터를 수집/처리/시각화 프로젝트
++ 네이버 뉴스에서 키워드에 맞게 원하는 정보 수집
++ 그 정보를 토대로 분야 별로 분류하고 사용자들이 어떤 정보를 더 보는지 확인
++ 팀원:안현동, 유재중, 임홍인, 송화랑
 
+<br>
 ## **클러스터 환경**
 + Cpu i7, Ram 16g, Hdd 500g x 4 PC(Total Cpu:32 Core, Ram:64g, hdd:2TB)
 
@@ -82,13 +89,17 @@
        
   + **Crawling DATA**
     + EC2 -> 카프카 -> 플루언티드 -> 엘라스틱서치 -> 키바나    
-    + 파이썬 코드를 사용하여 인터넷 뉴스에서 원하는 데이터로 수집 및 정제 -> 카프카 -> 플루언디트를 통해 엘라스틱서치에 저장, 키바나로 시각화
+    + Python 코드를 사용하여 인터넷 뉴스에서 원하는 데이터로 수집 및 정제 -> Kafka -> Fluentd를 통해 ElasticSearch에 저장, Kibana로 시각화 
     <br> 
-   
-   
+      
   + **LOG DATA**
-    + 코멘트 작성/삭제
-  
+    + Django -> Kafka -> Fluentd -> Apache Spark -> Apache Zeppelin
+    +  시각화된 데이터를 Django 웹서버에 구현, 사용자들의 로그를 Kafka -> Fluentd를 통해 Apache Spark에서 분석, 처리하고 Apache Zeppelin으로 시각화
+      <br> 
+      
+  + **모든 컴퓨터의 상태**
+    +  Kubernetes -> Prometheus -> Grafana
+    +  Kubernetes 아래 모든 Pods의 정보를 Prometheus에서 받고 상태를 Grafana로 시각화
   <br><br>
   
   ## **시스템 흐름도**
