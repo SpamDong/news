@@ -46,7 +46,7 @@
   
  ### **백엔드**   
   + Python(3.9)
-  + Django
+  + Django :2.0.5
   + DJango ORM
   + APACHE :2.4.29(ubuntu)
      
