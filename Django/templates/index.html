@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+{% load static %}
+
+<!-- saved from url=(0022)https://news.nate.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="google-site-verification" content="0j2FtyOhSMPTuQTUR5RA87AdwZ53VEe_ULUkay3WnB8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta id="viewport" name="viewport" content="">
+
+	<title>Spam_news</title>
+
+	<link rel="shortcut icon" href="https://news.nate.com/icon/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="https://nimg.nate.com/ui/uidev/images/mnews/common/nate_news_114.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pcsnb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/snb.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news_common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/section_news.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/stat.js' %}" charset="euc-kr"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/mobileAgentJs' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/commonTextGNBV1' %}"></script>
+
+	<link href="{% static 'css/SvcCommon_2020.css' %}" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="{% static 'js/CommonTextGNB_v20200305.js' %}" charset="utf-8"></script>
+	<script type="text/javascript" src="{% static 'assets/userJS' %}"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+
+
+		var agent = navigator.userAgent.toLowerCase();
+	    if ((navigator.appName === 'Netscape' && agent.indexOf('trident') !== -1) || (agent.indexOf("msie") !== -1)) {
+	        // ie일 경우
+	        var deleteHash = function(evt) {
+	            var isHash = document.title.split("#");
+	            if (isHash.length > 1) {
+	                document.title = isHash[0];  }
+	        };
+
+	        if (window.addEventListener) {
+	            window.addEventListener("load", deleteHash, false);
+	        } else {
+	            // ie하위버젼
+	            document.attachEvent('onpropertychange', deleteHash);
+	        }
+	    }
+	//]]>
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/tablet.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/RankJS' %}"></script>
+	<script type="text/javascript" src="{% static 'js/rank.js' %}"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	try {
+		document.domain = getDomain();
+
+		//window.setTimeout(showMobileBtn, 100);
+		mainRedirectMobile();
+	} catch(e) {}
+	//]]>
+	</script>
+    <!--네이트 오늘 -->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/today.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/plast-low-min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/gsap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/CustomEase.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/Draggable.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/DrawSVGPlugin.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/MotionPathPlugin.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/ScrollToPlugin.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/d3.v5.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/moment-with-locale.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/moment-timezone-with-data.min.js' %}"></script>
+	<!--//네이트 오늘 -->
+
+	<!-- SNS 공유하기 -->
+	<!-- S : Facebook Open Graph Meta Tag -->
+	<meta property="og:url" content="//news.nate.com">
+	<meta property="og:title" content="한눈에 보는 오늘 - 네이트뉴스">
+	<meta property="og:description" content="-실시간 이슈를 한눈에 만나보세요.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://nimg.nate.com/ui/etc/today/pc/src/images/og_nate_today.png">
+	<meta property="og:site_name" content="네이트뉴스">
+	<meta property="og:locale" content="ko_KR">
+	<!-- E : Facebook Open Graph Meta Tag -->
+
+	<!-- S :  네이트온 쪽지플러그인 Meta Tag-->
+	<meta name="nate:title" content="한눈에 보는 오늘 - 네이트뉴스">
+	<meta name="nate:description" content="#전문가들 방역 완화 비판 #신변비관 방화 4명 사망 #노정희 선관위원장 사퇴 거부">
+	<meta name="nate:site_name" content="네이트뉴스">
+	<meta name="nate:url" content="https://news.nate.com?service_dtm=2022-03-17%2014:00:00">
+	<meta name="nate:image" content="https://nimg.nate.com/ui/etc/today/pc/src/images/og_nate_today.png">
+	<!-- E :  네이트온 쪽지플러그인 Meta Tag-->
+
+	<!-- S :  네이트온쪽지 api -->
+	<script type="text/javascript" src="{% static 'assets/note_common_v2_1_1.min.js' %}"></script>
+	<script type="text/javascript">
+	 //<![CDATA[
+		var enc_note="X4vK-D_8SHRfmodZ9thd-c9rxorJ1pzhwsaVF9eo074JFKuqRS9wD1MsCyjrzn-4fGiygy-KPOyaDC1LGOB70f7aOSMJJ691SRSQc0NjQBc"
+	 //]]>
+	</script>
+	<!-- E :  네이트온쪽지 api -->
+	<script type="text/javascript" src="{% static 'js/sns.js' %}"></script>
+	<script type="text/javascript">
+		//<![CDATA[
+		$(function() {
+			var title = "한눈에 보는 오늘 - 네이트뉴스";
+			var srclink = "https://news.nate.com?service_dtm=2022-03-17%2014:00:00";
+
+			// SNS 공유용 url 을 정제한다.
+			srclink = refineSnsShareUrl(srclink);
+
+			$("#nateon").click(function() {
+				ndrclick('TOS01');
+				sendNateonNote();
+			});
+
+			$("#facebook").click(function() {
+				ndrclick('TOS02');
+				_sendSNS('fb',srclink, title);
+			});
+
+			$("#twitter").click(function() {
+				ndrclick('TOS03');
+				_sendSNS('tw',srclink, title);
+			});
+		});
+
+		//]]>
+	</script>
+	<!-- //SNS 공유하기 -->
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="{% static 'css/SvcCommon_2020.css' %}">
+	<script type="text/javascript" charset="UTF-8" src="{% static 'js/liveKeywordStatus.js' %}"></script>
+	<script type="text/javascript" charset="UTF-8" src="{% static 'js/rolling-jq-nj_https.js' %}"></script>
+</head>
+<body id="mediaHome">
+	<!-- mediaWraper -->
+	<div id="mediaWraper" class="section_news">
+		<!--head-->
+		<div id="header" role="banner" class="">
+			<!-- gnb -->
+			<div class="svcWrap">
+				<div class="gnbWrap">
+					<h1> <!--  로고 넣는 곳  -->
+						<a class="svcname" onclick="ndrclick(&#39;RIQ06&#39;);">뉴스</a>
+					</h1>
+			<!-- textGNB -->
+				</div>
+			</div>
+			<div class="navWrap">
+				<div class="snbArea" role="navigation">
+					<h2 class="hide">뉴스 메뉴</h2>
+					<ul>
+						<!-- 현제 페이지에 해당하는 경우 current="page" 추가 -->
+						<li><a onclick="ndrclick(&#39;RIG01&#39;);", href="http://127.0.0.1:8000/new/" >최신뉴스</a></li>
+						<li><a onclick="ndrclick(&#39;RIG01&#39;);", href="http://127.0.0.1:8000/election/" >대선</a></li>
+						<li><a onclick="ndrclick(&#39;RIG12&#39;);", href="http://127.0.0.1:8000/policy/" >정치</a></li>
+						<li><a onclick="ndrclick(&#39;RIG22&#39;);", href="http://127.0.0.1:8000/economy/" >경제</a></li>
+						<li><a onclick="ndrclick(&#39;RIG33&#39;);", href="http://127.0.0.1:8000/society/" >사회</a></li>
+						<li><a onclick="ndrclick(&#39;RIG47&#39;);", href="http://127.0.0.1:8000/life/" >생활</a></li>
+						<li><a onclick="ndrclick(&#39;RIG57&#39;);", href="http://127.0.0.1:8000/world/" >세계</a></li>
+					</ul>
+
+			<!-- SNB 배너 -->
+					<div class="svcLink">
+					</div>
+			<!-- //SNB 배너 -->
+				</div>
+			</div><!--head-->
+		</div>
+	</div><!-- //mediaWraper -->
+
+	<!-- contents -->
+	<div id="contents">
+		<!-- 뉴스엣지 컨테이너 -->
+		<div class="newsEdge">
+			<div class="inner">
+				<div class="">
+					<iframe src="http://172.30.1.30:30765/app/dashboards#/view/40c215c0-b001-11ec-9287-8b41a88416b2?embed=true&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2022-03-29T03:00:00.000Z',to:now))&_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,syncColors:!f,useMargins:!t),panels:!((embeddableConfig:(enhancements:(),savedVis:(data:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:news_company.keyword,missingBucket:!f,missingBucketLabel:Missing,order:desc,orderBy:'1',otherBucket:!f,otherBucketLabel:Other,size:10),schema:segment,type:terms)),searchSource:(filter:!(),index:d9c95070-af26-11ec-9287-8b41a88416b2,query:(language:kuery,query:''))),description:'',id:'',params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!t,show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(),type:category)),detailedTooltip:!t,grid:(categoryLines:!f),labels:(show:!f),legendPosition:right,maxLegendLines:1,palette:(name:default,type:palette),radiusRatio:0,seriesParams:!((circlesRadius:1,data:(id:'1',label:Count),drawLinesBetweenPoints:!t,interpolate:linear,lineWidth:2,mode:stacked,show:!t,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),thresholdLine:(color:%23E7664C,show:!f,style:full,value:10,width:1),times:!(),truncateLegend:!t,type:histogram,valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:''),type:value))),title:'%EC%8B%A0%EB%AC%B8%EC%82%AC%EB%B3%84%20%EB%B0%9C%ED%96%89%ED%95%9C%20%EC%8B%A0%EB%AC%B8%20%EC%88%98%20Top10',type:histogram,uiState:())),gridData:(h:17,i:'1a039622-8570-4d45-b07e-dbbec0c35835',w:36,x:0,y:0),panelIndex:'1a039622-8570-4d45-b07e-dbbec0c35835',type:visualization,version:'7.17.1'),(embeddableConfig:(enhancements:(),savedVis:(data:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count)),searchSource:(filter:!(),index:d9c95070-af26-11ec-9287-8b41a88416b2,query:(language:kuery,query:''))),description:'',id:'',params:(addLegend:!f,addTooltip:!t,metric:(colorSchema:'Green%20to%20Red',colorsRange:!((from:0,to:10000)),invertColors:!f,labels:(show:!t),metricColorMode:None,percentageMode:!f,style:(bgColor:!f,bgFill:%23000,fontSize:60,labelColor:!f,subText:''),useRanges:!f),type:metric),title:'%EC%B4%9D%20%EB%89%B4%EC%8A%A4%20%EA%B0%9C%EC%88%98',type:metric,uiState:())),gridData:(h:8,i:'33234817-a944-4bf4-81aa-e2b889300c87',w:12,x:36,y:0),panelIndex:'33234817-a944-4bf4-81aa-e2b889300c87',type:visualization,version:'7.17.1'),(embeddableConfig:(enhancements:(),savedVis:(data:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:news_type.keyword,missingBucket:!f,missingBucketLabel:Missing,order:desc,orderBy:'1',otherBucket:!f,otherBucketLabel:Other,size:11),schema:segment,type:terms)),searchSource:(filter:!(),index:d9c95070-af26-11ec-9287-8b41a88416b2,query:(language:kuery,query:''))),description:'',id:'',params:(addLegend:!f,addTooltip:!t,distinctColors:!f,isDonut:!t,labels:(last_level:!f,percentDecimals:2,position:default,show:!t,truncate:100,values:!t,valuesFormat:percent),legendPosition:right,maxLegendLines:1,nestedLegend:!f,palette:(name:default,type:palette),truncateLegend:!t,type:pie),title:'%EB%89%B4%EC%8A%A4%20%ED%83%80%EC%9E%85',type:pie,uiState:(vis:(legendOpen:!f)))),gridData:(h:12,i:'48a30a01-034d-460e-9289-af7d1aef1b7d',w:12,x:36,y:8),panelIndex:'48a30a01-034d-460e-9289-af7d1aef1b7d',type:visualization,version:'7.17.1'),(embeddableConfig:(enhancements:(),savedVis:(data:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(drop_partials:!f,extended_bounds:(),field:'@timestamp',interval:auto,min_doc_count:1,scaleMetricValues:!f,timeRange:(from:'2022-03-29T03:00:00.000Z',to:now),useNormalizedEsInterval:!t,used_interval:'30m'),schema:segment,type:date_histogram)),searchSource:(filter:!(),index:d9c95070-af26-11ec-9287-8b41a88416b2,query:(language:kuery,query:''))),description:'',id:'',params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!t,show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(),type:category)),detailedTooltip:!t,fittingFunction:linear,grid:(categoryLines:!f),labels:(),legendPosition:right,maxLegendLines:1,palette:(name:default,type:palette),radiusRatio:9,seriesParams:!((circlesRadius:1,data:(id:'1',label:Count),drawLinesBetweenPoints:!t,interpolate:linear,lineWidth:2,mode:normal,show:!t,showCircles:!t,type:line,valueAxis:ValueAxis-1)),thresholdLine:(color:%23E7664C,show:!f,style:full,value:10,width:1),times:!(),truncateLegend:!t,type:line,valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:''),type:value))),title:'%EC%8B%9C%EA%B0%84%EB%B3%84%20%EB%89%B4%EC%8A%A4',type:line,uiState:())),gridData:(h:13,i:'06a5439f-bf2d-4903-a305-62491236f435',w:36,x:0,y:17),panelIndex:'06a5439f-bf2d-4903-a305-62491236f435',type:visualization,version:'7.17.1')),query:(language:kuery,query:''),tags:!(),timeRestore:!f,title:'%EB%89%B4%EC%8A%A4%20%ED%86%B5%EA%B3%84',viewMode:edit)" height="600" width="1000"></iframe>
+				</div>
+			</div>
+
+			<!-- 뉴스 리스트 -->
+			<div class="todayListWrap">
+				<div class="todayListTop">
+					<h3 class="title">{{year}}.{{month}}.{{day}}</h3>
+				</div>
+				<!-- // 뉴스 리스트 -->
+				<!-- 사용 미정 UI
+					<div class="todayListEmpty">
+						<p class="emptyMsg">오늘의 키워드를 선택해주세요.</p>
+					</div>
+				-->
+				<div class="todayList">
+					<div class="todayListItem" style="opacity: 1; visibility: inherit;">
+						<ul class="listItemWrap">
+							{% for num in list %}
+                			<li class="item" role="link" style="transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+                    			<h5 class="subject"><a href="{{num.news_url}}">{{num.title}}</a></h5>
+                    			<div class="info">
+                        			<div class="state"><span class="provider">{{num.news_company}}</span><span class="time">{{num.news_type}}</span></div>
+									<div class="thumb-nail"></div>
+                    			</div>
+                			</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		var KEYWORD_URL = '/today/keywordList';
+		var ARTICLE_URL = '/today/articleList';
+	</script>
+	<script type="text/javascript" src="{% static 'js/userAgent.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/utils.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/today.js' %}"></script>
+	<!-- //contents -->
+	<script type="text/javascript">
+	//<![CDATA[
+		// ndr code
+		var sNdrPath = '',_ndr_br = '', sRef1 = '', sRef2 = "";
+
+					sNdrPath = "//statetc.nate.com/stat/stat.tiff?cp_url=[news.ndr.nate.com/today/";
+
+	   	draw_ndr(sNdrPath, _ndr_br, sRef1, sRef2);
+	//]]>
+	</script>
+
+	<img id="ndr" width="0" height="0" alt=" " src="{% static 'assets/stat.tiff' %}" style="position: absolute; left: 0px; bottom: 0px; display: none;">
+	<!-- interest targeting -->
+	<img src="{% static 'assets/setRetarget.php' %}" width="0" height="0" style="border:0;display:none;" alt="">
+
+
+</body>
+</html>

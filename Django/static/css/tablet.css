@@ -1,0 +1,47 @@
+@charset "euc-kr";
+
+/* ±âº»: size: 480 * 384 */
+#articleView .article.medium .flash_alt_cont_wrap { padding:0; margin:0 auto 70px auto; width:480px; height:384px; border:2px solid #e5e5e5; background:#fff; }
+	#articleView .article.medium .flash_alt_text_wrap { padding:0; margin:165px auto 0 auto; width:260px; height:95px; font-size:12px !important; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; color:#676767; line-height:1.4; }
+	#articleView .article.medium .flash_alt_text_wrap strong.headline { display:block; padding:0 0 4px 0; font-size:16px !important; color:#26adf1; letter-spacing:-1px; }
+	#articleView .article.medium .flash_alt_text_wrap strong{ font-size:12px !important; }
+
+/* ±âº»: size: 549 * 347 */
+#articleView .article.medium .widesizeWrap{ width:549px; height:347px; }
+	#articleView .article.medium .widesizeWrap .flash_alt_text_wrap{ padding:0; margin:148px auto 0 auto; width:260px; height:95px; font-size:12px !important; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; color:#676767; line-height:1.4; }
+
+/* ÆË¾÷: size:320 * 310 */
+.pop_movie .contents .movie .flash_alt_cont_wrap { padding:0; margin:0 auto; width:320px; height:310px; border:2px solid #e5e5e5; background:#fff; }
+	.pop_movie .contents .movie .flash_alt_text_wrap { padding:0; margin:117px auto 0 auto; width:260px; height:95px; font-size:12px !important; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; color:#676767; line-height:1.4; }
+	.pop_movie .contents .movie .flash_alt_text_wrap strong.headline { display:block; padding:0 0 4px 0; font-size:16px !important; color:#26adf1; letter-spacing:-1px; }
+	.pop_movie .contents .movie .flash_alt_text_wrap strong{ font-size:12px !important; }
+
+/* ¾îµÎ¿î ¹è°æ: size:400 * 324 */
+.flash_alt_cont_wrap_dark { float:left; padding:0; margin:0; width:400px; height:324px; background:#000; }
+	.flash_alt_text_wrap_dark { padding:0; margin:136px auto 0 auto; width:260px; height:95px; font-size:12px; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; color:#ccc; line-height:1.4; }
+	.flash_alt_text_wrap_dark strong.headline { display:block; padding:0 0 4px 0; font-size:16px; color:#26adf1; letter-spacing:-1px; }
+
+/* ¾îµÎ¿î ¹è°æ: size:640 * 383 */
+#sportsVodpop .vodLive .flash_alt_cont_wrap_dark { float:left; padding:0; margin:0 0 25px 0; width:640px; height:383px; background:#000; }
+	#sportsVodpop .vodLive .flash_alt_text_wrap_dark { padding:0; margin:136px auto 0 auto; width:260px; height:95px; font-size:12px; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; color:#ccc; line-height:1.4; }
+	#sportsVodpop .vodLive .flash_alt_text_wrap_dark strong.headline { display:block; padding:0 0 4px 0; font-size:16px; color:#26adf1; letter-spacing:-1px; }
+	
+/* ±¤Àú¿ì ¾Æ½Ã¾È°ÔÀÓ size: 640 * 383 */
+#vodpopWrap .livepopArea .livePlayer .liveBox .vodViewer .videoArea .flash_alt_cont_wrap_dark{ float:left; padding:0; margin:0 0 25px 0; width:640px; height:383px; background:#000; }
+	#vodpopWrap .livepopArea .livePlayer .liveBox .vodViewer .videoArea .flash_alt_text_wrap_dark { padding:0; margin:136px auto 0 auto; width:260px; height:95px; font-size:12px; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; color:#ccc; line-height:1.4; }
+	#vodpopWrap .livepopArea .livePlayer .liveBox .vodViewer .videoArea .flash_alt_text_wrap_dark strong{ position:static; display:inline; background:none; color:#999999; text-align:left; }
+	#vodpopWrap .livepopArea .livePlayer .liveBox .vodViewer .videoArea .flash_alt_text_wrap_dark strong.headline { display:block; padding:0 0 4px 0; font-size:16px; color:#26adf1; letter-spacing:-1px; }
+
+/* SNSº¸³»±â ´º½º´ñ±Û */
+.popup_send_twitter .check_list label { letter-spacing:-2px; }
+
+/* ¾ÆÀÌÆÐµå ¸ð¹ÙÀÏÀ¥º¸±â */
+.setting_moblie { width:970px; margin:20px auto; padding-bottom:15px; }
+	.setting_moblie a.btn { display:inline-block; width:220px; height:53px; margin-left:1px; padding:0 !important; font-size:22px; font-weight:bold; text-align:center; border:1px solid #bbb; color:#333; background-color: #fff; background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f3f3)); }
+	.setting_moblie a.btn span { display:block; height:37px; padding-top:16px; padding-left:30px; background-image:url('../../../../images/common/ico_m_ipad.gif'); background-repeat:no-repeat; background-position:12px 9px; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; line-height:1.2; }
+
+/* Galaxy Tab ¸ð¹ÙÀÏÀ¥º¸±â */
+.setting_moblie_tab { width:970px; margin:20px auto 0 auto; padding-bottom:15px; }
+	.setting_moblie_tab a { line-height:1.2; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "¸¼Àº °íµñ", helvetica,"Apple SD Gothic Neo",sans-serif; }
+	.setting_moblie_tab a.btn { display:inline-block; width:340px; height:63px; margin-left:1px; padding:25px 0 0 0; font-size:40px; font-weight:bold; text-align:center; border:1px solid #bbb; color:#333; background-color: #fff; background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f3f3)); }
+	.setting_moblie_tab a.btn.home { margin-left:30px; width:200px; }

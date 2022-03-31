@@ -1,0 +1,210 @@
+@charset "utf-8";
+/**************** textGNB ****************/
+.nHide, .nHide * {position:absolute !important;top:-1000px !important;left:-1000px !important;width:0 !important;height:0 !important;font-size:0 !important;line-height:0 !important;text-indent:-1000em !important;overflow:hidden !important}
+#header .gnbarea, #header .gnbArea, #header #gnbArea { width:100% !important; height:auto; margin:0; padding:0; z-index:2000; }
+#textGNB, #textGNB ul, #textGNB li, #textGNB dl, #textGNB dd { margin:0; padding:0; font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; font-size:12px; 
+ letter-spacing:-0.5px; line-height:1.2;}
+#textGNB { position:absolute; float:left; left:0; top:0; width:100%; margin:0; padding:0; z-index:99999999; }
+#textGNB a { text-decoration:none; font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; font-weight:normal; font-size:11px; line-height:1.2; letter-spacing:-0.5px !important; } /*color:#000 !important; */
+#textGNB a:link, #textGNB a:visited, #textGNB a:active { color:#000; }
+#textGNB a:hover { text-decoration:underline; }
+
+
+#GnbWrap { position:relative; margin:0 auto; padding:0; }
+#textGNB p.nateLink { position:absolute; top:8px; left:0; margin:0; padding:0; }
+#textGNB p.nateLink .main_nate { position:relative; float:left;display:block; margin:0; padding-right:17px; }
+/*#textGNB p.nateLink .main_nate:after { content:''; position:absolute; top:2px; right:0; width:1px; height:12px; background-color:#f0f2f4; }*/ /*color:#f0f2f4;*/
+/*#textGNB p.nateLink a span { display:none; }
+#textGNB p.nateLink a span.update { top:1px;background:url('//main2.nateimg.co.kr/img/common/gnb/set_textGnb_2013.gif') no-repeat -71px -329px; display:inline-block; width:9px; height:11px; text-indent:-9999px; vertical-align:top; }*/
+
+#textGNB .area_rtkwd {position:absolute;top:3px;left:100px;width:272px;height:350px;border:1px solid #444;z-index:999999; background-color:#fff;}/*box-shadow:0 2px rgba(240,240,240,0.5)*/
+#textGNB .area_rtkwd h3 {position:absolute;top:17px;left:26px;margin:0;width:130px;height:20px;color:#000;font-weight:bold;font-size:14px;letter-spacing:-1px;line-height:28px;text-indent:0;background:none;}
+#textGNB .area_rtkwd h3 span { position:relative; top:-2px; display:inline-block; margin:0 0 0 4px; font-size:11px; font-weight:normal; font-family:Tahoma, sans-serif;  letter-spacing:0;  color:#f6685e;}
+*:first-child+html #textGNB .area_rtkwd h3 { top:13px; }
+#textGNB .area_rtkwd h3 a { font-weight:bold; font-size:12px; color:#000 !important;}
+
+#textGNB .area_rtkwd .kwd_list { position:relative; width:272px; }
+#textGNB .area_rtkwd .kwd_list ol {position:relative;width:100%;margin:53px 0 0 0;padding:0;}
+#textGNB .area_rtkwd .kwd_list ol li {width:100%;overflow:hidden;list-style:none;}
+#textGNB .area_rtkwd .kwd_list ol li a {display:block;width:148px;height:28px;overflow:hidden;text-overflow:ellipsis;color:#000;}
+#textGNB .area_rtkwd .kwd_list ol li a:hover {color:#2d3740;text-decoration:none}
+
+#textGNB .area_rtkwd .kwd_list ol li p {position:relative;height:28px;margin:0;padding:0 14px 0 52px;line-height:28px;}
+#textGNB .area_rtkwd .kwd_list ol li p a {line-height:28px;}
+
+#textGNB .area_rtkwd .kwd_list ol li .num { position:absolute; top:4px; left:30px; width:16px; height:20px; font-weight:bold; line-height:19px; color:#222; text-align:center; }
+#textGNB .area_rtkwd .kwd_list ol li.rank01 .num, #textGNB .area_rtkwd .kwd_list ol li.rank02 .num, #textGNB .area_rtkwd .kwd_list ol li.rank03 .num, #textGNB .area_rtkwd .kwd_list ol li.rank04 .num, #textGNB .area_rtkwd .kwd_list ol li.rank05 .num { color:#f83030; }
+#textGNB .area_rtkwd .kwd_list ol li.on p a {font-weight:bold}
+#textGNB .area_rtkwd .kwd_list ol li.over {background-color:#F2F2F2}
+#textGNB .area_rtkwd .kwd_list ol li.over a {color:#FF3C37;text-decoration:none}
+
+#textGNB .area_rtkwd .kwd_list ol li p .icon {position:absolute; top:0; right:25px; display:block; width:14px; padding:0 0 0 16px; line-height:28px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) 0 0; color:#909091;font-family:tahoma; font-size:11px;}
+#textGNB .area_rtkwd .kwd_list ol li p .icon em { font-style:normal; }
+#textGNB .area_rtkwd .kwd_list ol li p .icon.up {background-position:0 8px;}
+#textGNB .area_rtkwd .kwd_list ol li p .icon.dn {background-position:0 -22px}
+/*#textGNB .area_rtkwd .kwd_list ol li p .icon.new {width:12px !important; right:16px;background-position:0 -357px}*/
+/*#textGNB .area_rtkwd .kwd_list ol li p .icon.keep {top:11px;right:12px;background-position:0 -374px}*/
+
+#textGNB .area_rtkwd.type_alone {top:1px;left:86px;height:28px;border:0;overflow:hidden;}
+#textGNB .area_rtkwd.type_alone .kwd_list {width:272px;height:28px;overflow:hidden}
+#textGNB .area_rtkwd.type_alone .kwd_list ol {margin:0}
+#textGNB .area_rtkwd.type_alone .kwd_list ol li:hover {background-color:transparent}
+
+/*#textGNB .area_rtkwd .kwd_list ol li.rank01 {background-position:14px 5px}
+#textGNB .area_rtkwd .kwd_list ol li.rank02 {background-position:14px -28px}
+#textGNB .area_rtkwd .kwd_list ol li.rank03 {background-position:14px -61px}
+#textGNB .area_rtkwd .kwd_list ol li.rank04 {background-position:14px -94px}
+#textGNB .area_rtkwd .kwd_list ol li.rank05 {background-position:14px -127px}
+#textGNB .area_rtkwd .kwd_list ol li.rank06 {background-position:14px -160px}
+#textGNB .area_rtkwd .kwd_list ol li.rank07 {background-position:14px -193px}
+#textGNB .area_rtkwd .kwd_list ol li.rank08 {background-position:14px -226px}
+#textGNB .area_rtkwd .kwd_list ol li.rank09 {background-position:14px -259px}
+#textGNB .area_rtkwd .kwd_list ol li.rank10 {background-position:14px -292px}*/
+
+#textGNB .personalInfo { float:right; padding:8px 0 0 0; text-align:right; }
+#textGNB .personalInfo a { overflow:hidden; }
+#textGNB .personalInfo a.login_nate { float:right; padding:0 8px 0 0; color: #000; }
+/*#textGNB .personalInfo span { float:left; display:inline; }
+#textGNB .personalInfo a span { text-indent:-1000em; }*/
+
+#textGNB .personalInfo #directLink { float:left; position:relative; margin:-5px 0 0 0; padding:5px 5px 5px 0; color:#666666; text-align:right; line-height:14px;font-size:11px; }
+#textGNB .personalInfo #directLink a {  }
+#textGNB .personalInfo #directLink .namelink { margin-right:10px; color:#000 !important; }
+#textGNB .personalInfo #directLink .namelink em {font-style:normal;letter-spacing:-0.5px;}
+#textGNB .personalInfo #directLink .open { position:static; margin-top:-2px; padding:0 15px 1px 0; background:url('https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png') no-repeat right -16px; }
+#textGNB .personalInfo #directLink .close { position:static; margin-top:-2px; padding:0 15px 1px 0; background:url('https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png') no-repeat right -67px; }
+
+#textGNB .personalInfo #directLink .myMenu { position:absolute; top:25px; right:10px; width:104px; height:88px; border:1px solid #636872; background-color:#FFF; z-index:3; }
+#textGNB .personalInfo #directLink .myMenu ul li { list-style:none; float:left; width:100%; height: 44px; border-bottom:1px solid #dcdcdc; }
+#textGNB .personalInfo #directLink .myMenu ul li:last-child { border-bottom:0; }
+#textGNB .personalInfo #directLink .myMenu ul li a { display:block; line-height:44px; font-size: 13px; text-align: center; text-decoration:none; }
+#textGNB .personalInfo #directLink .myMenu ul li a:hover { text-decoration:none; }
+#textGNB .personalInfo #directLink .myMenu ul li a.logout { color:#ff4546 !important; }
+
+#textGNB .personalInfo #nateID { float:left; margin:0 8px 0 0; color:#666666; text-align:right; letter-spacing:0; cursor:default; }
+#textGNB .personalInfo #nateID a { color:#48688f !important; cursor:default; }
+
+#textGNB .personalInfo ul.svc_new { float:left; list-style:none;}
+#textGNB .personalInfo ul.svc_new li { float:left; padding:0; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon { position:relative; float:left; padding:0 8px 0 0; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon a { display:block; text-align:left; color:#000;}
+#textGNB .personalInfo ul.svc_new li.svc_nateon a span.name { display:inline-block; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon.off a {  }
+#textGNB .personalInfo ul.svc_new li.svc_nateon .qty { display:inline-block; padding: 0 1px 0 3px; color:#f6685e; font-weight: normal; } /*min-width:8px;*/
+#textGNB .personalInfo ul.svc_new li.svc_nateon .qty em { position: relative; top:-2px; font-style:normal; font-size:12px; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon .qty.none { color:#000; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon a:hover .qty.none { color:#a8a8a8; text-decoration:underline; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon.none { display:block !important; position:relative !important; left:0; top:0;}
+
+#textGNB .personalInfo ul.svc_new li.svc_nateon .lyr_noti { position:absolute; top:28px; left:-233px; width:300px; height:46px; border:1px solid #636872; text-align:left; z-index:100; background-color:#fff; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon .lyr_noti:before { content:''; position:absolute; top:-9px; right:24px; width:16px; height:9px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) -84px 0 no-repeat; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon .lyr_noti span { display:block; float:left; padding:15px 0 0 13px; color:#222; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon .lyr_noti .set { position:absolute; top:15px; right:45px; padding:0 10px 0 0; color:#f6685e !important; text-decoration:underline; }
+#textGNB .personalInfo ul.svc_new li.svc_nateon .lyr_noti .cls { position:absolute; top:13px; right:14px; display:block; padding:0;  width:18px; height:18px; text-indent:-9999px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) -83px -40px no-repeat; }
+
+#textGNB .personalInfo ul.svc_new li.svc_mail .qty { line-height:15px; }
+
+#textGNB .gnbmenu { float:right; padding:8px 0 0 0; text-align:right; } /*padding-top:3px;*/
+#textGNB .gnbmenu dt.hidden { display:none; }
+#textGNB .gnbmenu dd { float:left; } /*padding:4px 0 0; */
+
+#textGNB .gnbmenu .nate ul li { float:left; list-style:none; }  /* height:14px;*/
+#textGNB .gnbmenu .nate ul li a { float:left; margin:0 8px; color:#000; } /*line-height:13px;*/
+#textGNB .gnbmenu .nate ul li.svc_mail {  }
+#textGNB .gnbmenu .nate ul li.svc_mail a .qty { min-width:8px;  padding-top:0; font-weight: normal; color: #f6685e; } /*line-height:12px;*/
+#textGNB .gnbmenu .nate ul li.svc_mail a .qty em { position: relative; top:-2px; display:inline-block; font-size:12px; font-style:normal;}
+
+#textGNB .gnbmenu .moreList { position:static; height:auto; margin-left:6px; padding:0; border:none; background:none; }
+#textGNB .gnbmenu .moreList a.moreList_lk { padding-right:11px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) right -88px no-repeat; color:#000; } /*line-height:13px; */
+/*#textGNB .gnbmenu .moreList a.mapLink { padding:0 0 0 6px; background:url('//main2.nateimg.co.kr/img/common/gnb/set_textGnb_2013.gif') no-repeat -79px -292px; }*/
+
+#gnbList { position:absolute; top:37px; right:0; float:left; display:none; height:auto; margin:0; padding:0; z-index:100; text-align:left; } /*background-color:#E9E9E9;*/
+#gnbList a:link, #gnbList a:visited, #gnbList a:active { color:#222; font-size:13px; letter-spacing:-1px; } /*padding:1px 3px 0 0;*/
+#gnbList a:hover { color:#f6685e; text-decoration:underline; }
+
+#gnbList .wrap { position:relative; float:left; width:411px; height:255px; margin:0; padding:0; border:1px solid #636872; background-color:#FFFFFF; }
+#gnbList .wrap:before { content:''; position:absolute; top:-9px; right:24px; width:16px; height:9px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) -84px 0 no-repeat; }
+#gnbList .wrap ul { float:left; width:102px; margin:25px 0 25px 0; height:159px; border-right:1px solid #f2f2f2; }
+#gnbList .wrap ul.last { border-right:0; padding-right:0; }
+#gnbList .wrap ul li { float:none; padding:0 0 13px 13px; list-style:none; }
+#gnbList .wrap a.close { position:absolute; top:10px; right:10px; display:block; width:18px; height:18px; padding:0; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) -83px -40px no-repeat; text-indent:-1000em; z-index:3;  cursor:pointer;}
+
+#gnbList .wrap p.common { clear:both; margin:0; padding:15px 0 0 0; height:30px; border-top:1px solid #f2f2f2; text-align:right; background-color:#fbfbfb; }
+#gnbList .wrap p.common a.sitemap { display:block; text-align:center; color:#222; }
+#gnbList .wrap p.common a.sitemap:hover {  }
+
+.gnb { background:none; }
+.cyHide { position:absolute; top:-1000px; left:-1000px; line-height:0; text-indent:-1000em; }
+
+.area_access {position:absolute;top:0;left:0;width:135px;z-index:2147483647}
+.area_access a {position:absolute;top:-50px;left:0;display:block;width:133px;height:18px;padding:6px 0 0;border:1px solid #ED2000;font-size:12px;background-color:#000;color:#FFF;text-align:center;text-decoration:none;text-indent:0;letter-spacing:1;}
+.area_access a strong {padding:0 7px 0 0;background:url(//main.nateimg.co.kr/img/v6/set_common_160721.png) right -99px no-repeat;font-weight:400}
+.area_access a:active,div.area_access a:focus{top:0}
+
+/*  Nate */
+.nateGnb { height:36px; }
+.nateGnb #GnbWrap { width:100%; }
+.nateGnb .personalInfo #directLink .namelink { cursor:pointer !important; }
+.nateGnb .personalInfo #directLink a.namelink:hover { text-decoration:none; }
+#textGNB .new { width:970px; } /*  Nate 신규형 */
+#textGNB .communication p.nateLink { display:none; } /*  Nate 커뮤니케이션센터 */
+/*#textGNB .search p.nateLink { margin-left:11px; }*/ /*  Nate 검색/지도 */
+
+/* 제휴형 */
+#textGNB .Connect { padding:0 10px; height:45px; background-color:#FFF; font-size:12px; border-bottom:1px solid #dadada; }
+#textGNB .Connect.game { height:65px; }
+#textGNB .Connect a:link, #textGNB .Connect a:visited, #textGNB .Connect a:hover, #textGNB .Connect a:active { font-size:12px; }
+#textGNB .Connect h1 { float:left; margin:14px 10px 0 0; text-indent:-1000em; overflow:hidden; z-index:3;  width:57px; height:17px; background:url('//main2.nateimg.co.kr/img/common/set_partner_game.png') no-repeat 0 0; }
+#textGNB .Connect.game h1 { margin:25px 10px 0 0; }
+#textGNB .Connect h1 a { display:block; width:57px; height:17px; }
+#textGNB .Connect h2 { float:left; margin-top:14px; width:65px; height:19px; background:url('//main2.nateimg.co.kr/img/textGNB/set_partner_0624.gif') no-repeat 0 -62px; }
+#textGNB .Connect h2 a { display:block; width:65px; height:19px; text-indent:-9999px; }
+#textGNB .Connect.game h2 { margin-top:24px; width:41px; height:22px; background:url('//main2.nateimg.co.kr/img/common/set_partner_game.png') no-repeat 0 -58px; }
+#textGNB .Connect.game h2 a { width:41px; height:22px; }
+/*#textGNB .Connect.movie h2 { width:35px; background:url('//main2.nateimg.co.kr/img/textGNB/set_partner_movie.png') no-repeat 0 -62px; }
+#textGNB .Connect.movie h2 a { width:35px; }
+#textGNB .Connect.estate h2 { width:53px; background:url('//main2.nateimg.co.kr/img/textGNB/set_partner_estate.png') no-repeat 0 -62px; }
+#textGNB .Connect.estate h2 a { width:53px; }*/
+
+#textGNB .Connect .min-width { position:relative; float:right; width: 357px; margin: 4px 0 0 0; }
+#textGNB .Connect.game .min-width { margin: 16px 0 0 0; }
+
+#textGNB .Connect dl.gnbmenu { position:absolute; right:0; display:inline; height:28px; padding:11px 0 1px 0; line-height:14px; overflow:hidden; z-index:2; }
+#textGNB .Connect dl.gnbmenu dd {  }
+#textGNB .Connect dl.gnbmenu dd a { letter-spacing:-1px; color:#000; }
+#textGNB .Connect.game dl.gnbmenu dd a:hover { color:#ff2c2e; text-decoration:underline; }
+#textGNB .Connect dl.gnbmenu dd.nate { }
+#textGNB .Connect dl.gnbmenu dd.moreList { }
+#textGNB .Connect dl.gnbmenu dd.moreList a { padding-right:14px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) right -87px no-repeat; color:#000; }
+#textGNB .Connect.game dl.gnbmenu dd.moreList a:hover { color:#ff2c2e; text-decoration:underline; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) right -137px no-repeat; }
+
+/*#textGNB .gnbmenu { float:right; padding:8px 0 0 0; text-align:right; }
+#textGNB .gnbmenu dt.hidden { display:none; }
+#textGNB .gnbmenu dd { float:left; }
+
+#textGNB .gnbmenu .nate ul li { float:left; list-style:none; }
+#textGNB .gnbmenu .nate ul li a { margin:0 8px; color:#999; }
+#textGNB .gnbmenu .nate ul li.svc_mail {  }
+#textGNB .gnbmenu .nate ul li.svc_mail a .qty { min-width:8px;  padding-top:0; color:#f6685e; font-weight: normal; }
+#textGNB .gnbmenu .nate ul li.svc_mail a .qty em { position: relative; top:-2px; display:inline-block; font-size:12px; font-style:normal;}*/
+#textGNB .gnbmenu .moreList { position:static; height:auto; padding:0; border:none; background:none; }
+#textGNB .gnbmenu .moreList a.moreList_lk { padding-right:14px; background:url(https://main2.nateimg.co.kr/img/common/set_textGnb_20200806.png) right -88px no-repeat; color:#000; }
+
+#textGNB .Connect .personalInfo { position:absolute; top:11px; right:327px; width:64px; padding:0 0 0 3px; text-align:left; }
+#textGNB .Connect.game .personalInfo { right:341px; }
+#textGNB .Connect .personalInfo a { position:absolute;  }
+#textGNB .Connect .personalInfo a.logout { display:block; color:#000; }
+#textGNB .Connect.game .personalInfo a:hover { color:#ff2c2e; text-decoration:underline; }
+
+/* --------------------- 웹네이트온 알림 푸시용 start Non-jQuery --------------------- */
+#web_nateon_notice_wrap {width: 196px; position: fixed; right: 2px; bottom: 5px; z-index: 999999;}
+#web_nateon_notice {width: 196px; font-family: "dotum"; font-size: 14px; cursor: pointer; text-align: left; list-style: none; padding: 0; margin: 0;}
+#web_nateon_notice .box {position: relative; background: url("//main.nateimg.co.kr/img/v6/nateon/bg_box.png") 0 0 no-repeat; width: 196px; height: 63px; display:block; opacity: 0; margin:0;}
+#web_nateon_notice .box .btn_close {position: absolute; right: 3px; top:3px; width: 20px; height: 20px; text-indent: -99999px; cursor: pointer; border:0px solid red; z-index:100;}
+#web_nateon_notice .box .icon {position: absolute; left: 14px; top:10px; width: 17px; height: 18px; background: url("//main.nateimg.co.kr/img/v7/nateon_img_17_18.png") 0 0 no-repeat;}
+#web_nateon_notice .box .name {position: absolute; left: 36px; top:14px; width: 130px; height: 14px; font-size: 12px; color: #222222; font-weight: bold; text-decoration: none;}
+#web_nateon_notice .box .content {position: absolute; left: 14px; top:37px; width: 165px; height: 14px; font-size: 12px; color: #222222;}
+#textGNB .area_rtkwd .kwd_list ol {height: 280px; overflow: hidden;}
+#textGNB .area_rtkwd {*height: 267px;}
+li {vertical-align: top;}
+/* --------------------- 웹네이트온 알림 푸시용 end Non-jQuery --------------------- */

@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+
+{% load static %}
+<!-- saved from url=(0054)https://media.naver.com/press/056/ranking?type=popular -->
+<html lang="ko" data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title id="browserTitleArea">Spam_news</title>
+
+	<script>
+	function isMobileDevice() {
+		return /^.*(iPhone|iPod|iPad|Android).*/.test(navigator.userAgent);
+	}
+</script>
+
+	<script>
+	(function () {
+		try {
+			if (isMobileDevice() && isAbleApplyPrefersColorScheme()) {
+				
+				document.querySelector("html").classList.add("DARK_THEME");
+			}
+		} catch(e) {}
+
+		function isAbleApplyPrefersColorScheme() {
+			
+			if (window.matchMedia("(prefers-color-scheme)").matches === false) {
+				return false;
+			}
+
+			var userAgent = navigator.userAgent;
+
+			if (userAgent.indexOf("NAVER") > -1) {
+				
+				if (/.*NAVER\([a-zA-Z]*;\s[a-zA-Z]*;\s([0-9]*);/.test(userAgent)) {
+					return Number(RegExp.$1) >= 1000;
+				}
+			} else {
+				
+				return document.cookie.indexOf("NSCS=1") > -1;
+			}
+
+			return false;
+		}
+	})();
+</script>
+
+	<script>
+		var g_ssc = 'news.v3_press' || null;
+		</script>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/other.css' %}">
+	<link rel="shortcut icon" type="image/x-icon" href="https://mimgnews.pstatic.net/image/news/m/2014/favicon/favicon.ico">
+	<script>
+	(function(){
+		var userAgent = navigator.userAgent;
+		var result = [];
+
+		if(userAgent.indexOf('Android') > -1){
+			result = [
+				'<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/android_legacy_hdpi_72X72.png" />',
+				'<link rel="apple-touch-icon-precomposed" sizes="96x96" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/android_legacy_xhdpi_96x96.png" />',
+				'<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/android_legacy_xxhpdi_144x144.png" />',
+				'<link rel="apple-touch-icon-precomposed" sizes="192x192" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/android_legacy_xxxhpdi_192x192.png" />'
+			];
+		}else if(userAgent.indexOf('iPhone') > -1){
+			result = [
+				'<link rel="apple-touch-icon-precomposed" sizes="120X120" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/iOS_iPhone_2x_120X120.png" />',
+				'<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/iOS_iPhone_3x_180X180.png" />'
+			];
+		}else if(userAgent.indexOf('iPad') > -1){
+			result = [
+				'<link rel="apple-touch-icon-precomposed" sizes="167x167" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/iOS_iPadPro_2x_167X167.png" />',
+				'<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://ssl.pstatic.net/static.news/image/news/m/2018/favicon/06/iOS_iPad_2x_152X152.png" />'
+			];
+		}
+		document.write(result.join('\n'));
+	})();
+</script>
+
+	<script type="text/javascript" src="{% static 'js/statistics_jquery.js' %}"></script>
+
+	<script>
+
+document.documentElement.setAttribute('data-useragent', navigator.userAgent);
+
+
+function showNoImage(elImg, type) {
+    switch (type) {
+        
+        case "remove":
+            try {
+                elImg.parentNode.removeChild(elImg);
+            } catch(e) {}
+            break;
+
+        
+        case "removeParent":
+            try {
+                elImg.parentNode.outerHTML = '';
+            } catch(e) {}
+            break;
+
+        
+        case "alt":
+            elImg.outerHTML = ('<span class="noimage_text {imgClassName}">' + (elImg.alt || "") + '</span>')
+                
+                .replace('{imgClassName}', elImg.className);
+            break;
+
+        
+        default:
+            
+            elImg.outerHTML = Number(elImg.getAttribute("height")) > 0?
+                
+                '<span class="noimage_wrap" style="height:' + elImg.getAttribute("height") + 'px;"><span class="noimage"></span></span>':
+                '<span class="noimage_wrap"><span class="noimage"></span></span>';
+    }
+}
+
+
+function doAfterLoadEnd(callback, callbackOnPersisted) {
+    var eventName = "onpageshow" in window ? "pageshow" : "load";
+
+    callback = callback || function(){};
+    callbackOnPersisted = callbackOnPersisted || function(){};
+
+    window.addEventListener(eventName, function(e) {
+        try{
+            if(Boolean(e.persisted)){  
+                callbackOnPersisted();
+                return;
+            }
+        }catch(e){}
+
+        callback();
+    });
+}
+</script>
+
+	<script type="text/javascript" src="{% static 'js/news.mobile.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/presshome.dependency.js' %}"></script>
+
+	<script>
+    (function() {
+        var path = location.pathname;
+        var isLiveUrl = path.indexOf('/press/' + '056/live') >= 0;
+        var agentInfo = news.Util.getAgentInfo();
+        var isAndroidMobile = agentInfo.bIsAndroid && agentInfo.bMobileOrTablet;
+        var isLiveViewer = agentInfo.bIsLiveViewer;
+
+        if (isLiveUrl && isAndroidMobile && isLiveViewer) {
+            document.querySelector('html').classList.add('NAVER_APP_LIVE_VIEWER');
+        }
+    })();
+</script>
+
+	<script>
+function goMainChannelUrl() {
+    if (isMobileDevice()) {
+        return news.Util.goMainChannel();
+    } else {
+        return window.location = "https://news.naver.com";
+    }
+}
+</script>
+
+	<meta property="og:title" content="KBS 언론사홈">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://media.naver.com/press/056">
+	<meta property="og:image" content="https://mimgnews.pstatic.net/image/upload/office_logo/056/2017/12/21/logo_056_41_20171221171221.jpg">
+	<meta property="og:description" content="언론사 주요 뉴스와 속보를 만나볼 수 있습니다.">
+	<meta property="og:article:author" content="네이버">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="KBS 언론사홈">
+	<meta name="twitter:site" content="네이버 뉴스">
+	<meta name="twitter:creator" content="네이버 뉴스">
+	<meta name="twitter:image" content="https://mimgnews.pstatic.net/image/upload/office_logo/056/2017/12/21/logo_056_41_20171221171221.jpg">
+	<meta name="twitter:description" content="언론사 주요 뉴스와 속보를 만나볼 수 있습니다.">
+
+	<script>
+    
+    (function () {
+        var isUnderIE10 = navigator.appName === "Microsoft Internet Explorer";
+        if (!isUnderIE10) {
+            var script = document.createElement("script");
+            script.async = true;
+            script.src = "https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js";
+            document.head.appendChild(script);
+        }
+    })();
+
+    
+    window.gladsdk = window.gladsdk || { cmd: [] };
+    gladsdk.cmd.push(function () {
+        
+        gladsdk.setGlobalConfig({
+            enablePersistAd: true
+        });
+
+        
+        var adUnits = [];
+    
+        adUnits.push({
+            adUnitId: "m_news",
+            adSlotElementId: "nmap_press_home",
+            customParam: {
+                calp: "nhome",
+                oid: "056",
+                directSalesPct : 0
+            }
+        });
+    
+        for (let i = 0; i < adUnits.length; i++) {
+            gladsdk.defineAdSlot(adUnits[i]);
+        }
+
+        
+        var htmlClass = document.querySelector("html").getAttribute("class");
+        if (htmlClass && htmlClass.indexOf("DARK_THEME") > -1) {
+            gladsdk.setHostMeta("theme", "system");
+        }
+    });
+</script><script async="" src="{% static 'js/gfp-core.js' %}"></script>
+
+	<script type="text/javascript" charset="utf-8" src="{% static 'js/splugin.m.js' %}"></script>
+
+	<link id="naver-splugin-css" rel="stylesheet" type="text/css" href="{% static 'css/spi_standard_m_https.css' %}">
+
+	<script type="text/javascript" charset="utf-8" src="{% static './gnb_utf8' %}"></script>
+
+	<style id="gnb_style" type="text/css">@charset "UTF-8";
+/* NTS UIT Development Office YJH 140717 */
+a.gnb_my, .gnb_icon, #gnb .gnb_my_interface, .gnb_my_li .gnb_my_content .gnb_membership, #gnb .gnb_my_membership, #gnb .gnb_ico_num .gnb_ico_new, #gnb .gnb_ico_num .gnb_ico_new .gnb_count, .gnb_lst .ico_arrow, a.gnb_my .filter_mask, .gnb_my_lyr, .gnb_my_li .gnb_my_content .gnb_mask, .gnb_my_li .gnb_my_content .gnb_change, .gnb_my_li .gnb_my_content .gnb_edit_lst li, .gnb_my_li .gnb_my_content .gnb_pay_check em, #gnb .gnb_my_li .gnb_my_community a.gnb_pay span, .gnb_notice_li .gnb_notice_lyr, .gnb_notice_li .svc_list .gnb_ico_mail, .gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_list .gnb_btn_remove i, .gnb_notice_li .gnb_error .gnb_ico_error, .gnb_ly_alert .gnb_btn_close i, .gnb_first_visit, .gnb_search_box, .gnb_search_box .gnb_del_txt, .gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new, .gnb_svc_more .svc_btnwrp button { background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v14.png) no-repeat -999px -999px;		background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v15.png?v=2006) no-repeat -999px -999px; /* background: url(../img/sp_gnb_v15.png) no-repeat -999px -999px; */}
+.gnb_favorite_area, .gnb_search_area, .gnb_banner, .gnb_linkwrp{background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr2_v2.png) no-repeat -999px -999px}
+#gnb .gnb_my_li .gnb_my_community a, .gnb_notice_li .gnb_notice_all, a.gnb_service_all, .gnb_svc_more .svc_btns{display:block;height:38px;border-top:1px solid #ebebeb;background-color:#f8f8f8;text-align:center;font-weight:bold;text-decoration:none;letter-spacing:-1px;line-height:38px}
+#gnb .gnb_my_li .gnb_my_community a:visited, .gnb_notice_li .gnb_notice_all:visited, a.gnb_service_all:visited, .gnb_svc_more .svc_btns:visited{color:#444}
+.gnb_login_li, .gnb_my_li, .gnb_notice_li, .mail_li, .gnb_service_li{float:left;margin-right:2px;overflow:visible}
+.gnb_login_li a, .gnb_my_li a, .gnb_notice_li a, .mail_li a, .gnb_service_li a{position:relative;z-index:100}
+a.gnb_my, .gnb_icon{position:relative}
+#gnb{position:relative;z-index:2147483646;font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important;color:#444;font-size:12px;letter-spacing:0 !important;line-height:normal !important;text-align:left !important}
+#gnb div, #gnb p, #gnb span, #gnb em, #gnb strong, #gnb h1, #gnb h2, #gnb h3, #gnb h4, #gnb h5, #gnb h6, #gnb ul, #gnb ol, #gnb li, #gnb dl, #gnb dt, #gnb dd, #gnb table, #gnb th, #gnb td, #gnb form, #gnb fieldset, #gnb legend, #gnb input, #gnb textarea, #gnb button, #gnb label{font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important}
+#gnb a, #gnb label, #gnb button{cursor:pointer}
+#gnb a, #gnb a:visited, #gnb a:active, #gnb a:focus{color:#444}
+#gnb a:hover{color:#444;text-decoration:underline}
+#gnb input::-ms-clear{display:none}
+#gnb em{font-style:normal}
+#gnb ul{list-style:none}
+#gnb .blind{display:block;overflow:hidden;position:absolute;top:-1000em;left:0;width:1px;height:1px;margin:0;padding:0;font-size:0;line-height:0}
+#gnb .gnb_my_membership{padding: 0;display: block;width: 64px;height: 16px;background-position: -296px -359px;margin: 0;}
+#gnb .gnb_my_interface{padding:5px;position:absolute;top:12px;right:8px;display:block;width:17px;height:16px;background-position:-90px 5px}
+#gnb .gnb_my_interface:hover{background-position:-90px -20px}
+#gnb .gnb_my_interface:focus{background-position:-90px -20px}
+#gnb .gnb_pad_lyr{position:absolute}
+#gnb .gnb_ico_num{display:block;position:absolute;top:1px;width:40px;text-align:center}
+#gnb .gnb_ico_num .gnb_ico_new{height:15px;display:inline-block;background-position:-331px 0;zoom:1}
+#gnb .gnb_ico_num .gnb_ico_new .gnb_count{position:relative;top:0;right:-5px;height:15px;margin:0;padding:0 4px 0 1px;display:inline-block;*display:inline;vertical-align:top;background-position:100% 0;text-indent:-2px;font-family:tahoma !important;font-weight:bold;color:#fff;zoom:1}
+#gnb .gnb_ico_num .gnb_ico_new .plus{margin:1px -1px 0 2px;font-size:8px;display:inline-block;color:#fff;vertical-align:top}
+:root #gnb .gnb_pad_lyr{opacity:1 !important;/* background:#fff */}
+.gnb_lst{margin:0;padding:0;zoom:1}
+.gnb_lst:after{display:block;clear:both;content:''}
+.gnb_lst ul{margin:0;padding:0}
+.gnb_lst .ico_arrow{display:none;position:absolute;left:50%;top:27px;width:10px;height:8px;margin-left:-5px;background-position:-175px -10px}
+.gnb_lyr_opened .gnb_my_lyr, .gnb_lyr_opened .gnb_service_lyr, .gnb_lyr_opened .gnb_notice_lyr, .gnb_lyr_opened .ico_arrow{display:block !important}
+.gnb_login_li{height:23px;padding:5px 7px 0 0}
+.gnb_btn_login, .gnb_bg, .gnb_bdr{display:inline-block;width:46px;height:20px;font-size:12px}
+.gnb_btn_login{position:relative}
+.gnb_bg{background-color: #fff;opacity: 0.05;filter: alpha(opacity=5);}
+.gnb_bdr{position:absolute;top: -1px;left: -1px;width: 46px;height: 20px;border: 1px solid #000;opacity: 0.12;filter: alpha(opacity=12);}
+.gnb_txt{position:absolute;top:0;left:0;width:45px;height:20px;padding-left:1px;line-height:21px;color:#666;text-align:center}
+.gnb_btn_login:hover{text-decoration:none !important}
+.gnb_account .gnb_btn_login{width:54px;margin:-1px 0 0 8px;vertical-align:top}
+.gnb_account a.gnb_btn_login .gnb_txt {padding-left: 0;}
+.gnb_account .gnb_bdr{width:52px}
+.gnb_account .gnb_txt{width:53px}
+.gnb_my_li{margin-right:7px}
+.gnb_my_namebox{padding:2px 9px 0 0;background-repeat:no-repeat;background-position:100% 50%;zoom:1}
+.gnb_my_namebox:after{display:block;clear:both;content:''}
+a.gnb_my{float:left;display:block;font-size:12px;vertical-align:middle}
+a.gnb_my .filter_mask {position: absolute; top: -1px; left: -1px; z-index: 1; width: 28px; height: 28px; background-position: -260px -60px;}
+a.gnb_my img{vertical-align:top;border-radius:16px}
+a.gnb_my .gnb_name{margin-right:-1px;padding-left:5px;display:inline-block;height:28px;line-height:28px;vertical-align:top;font-size:11px;color:#444}
+a.gnb_my:visited{color:#444}
+a.gnb_my:hover, a.gnb_my:active, a.gnb_my:visited, a.gnb_my:focus{text-decoration:none !important}
+a.gnb_my:hover .gnb_name{text-decoration:underline}
+a.gnb_my .ico_arrow{top:25px;margin-left:8px}
+.gnb_my_namebox a.gnb_emp{float:left;display:inline-block;height:28px;margin-left:3px;line-height:28px;font-size:11px;color:#777 !important}
+.gnb_my_lyr{display:none;position:absolute;top:26px;right:-8px;padding:9px 5px 4px 4px;width:316px;height:155px;background-position:-2px -1310px;z-index:10}
+.gnb_my_lyr.gnb_groupid{height:144px;background-position:-2px -1500px}
+.gnb_my_lyr.gnb_groupid .gnb_my_content{height:80px}
+.gnb_my_lyr.gnb_groupid.gnb_longid1{height:144px;/*background-position:-2px -1664px*/}
+.gnb_my_lyr.gnb_groupid.gnb_longid2{height:144px;background-position:-2px -1828px}
+.gnb_my_lyr.gnb_longid1{/*width:318px;*/ /*background-position:-2px -1118px;*/}
+.gnb_my_lyr.gnb_longid2{width:348px;background-position:-2px -926px}
+.gnb_my_li .gnb_my_content{zoom:1;height:91px;padding:15px 0 10px 15px}
+.gnb_my_li .gnb_my_content:after{display:block;clear:both;content:''}
+.gnb_my_li .gnb_my_content .gnb_img_area{float:left;position:relative;display:block;width:80px;margin: 1px 0 0 1px;}
+.gnb_my_li .gnb_my_content .gnb_img_area img{vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_mask{position:absolute;top:0;left:0;display:block;width:80px;height:80px;background-position:-70px -60px}
+.gnb_my_li .gnb_my_content .gnb_change{position:absolute;bottom:-2px;left:-2px;display:block;width:28px;height:28px;background-position:-140px 0px}
+.gnb_my_li .gnb_my_content .gnb_change:hover{background-position:-140px -30px}
+.gnb_my_li .gnb_my_content .gnb_txt_area{float:left;width:210px;margin:0 0 0 10px}
+.gnb_longid1 .gnb_my_content .gnb_txt_area{/* width:210px; */}
+.gnb_longid2 .gnb_my_content .gnb_txt_area{width:235px}
+.gnb_my_li .gnb_my_content .gnb_account{margin-bottom:3px 0 1px;font-size:0}
+.gnb_my_li .gnb_my_content .gnb_name{color:#666;font-size:14px}
+.gnb_my_li .gnb_my_content .gnb_name a{display:inline-block;vertical-align:top;font-weight:bold;color:#222 !important}
+.gnb_my_li .gnb_my_content a.gnb_mail_address{margin-left:1px;font-family:tahoma;color:#666 !important;font-size:12px}
+.gnb_my_li .gnb_my_content .gnb_edit_lst{zoom:1;margin-top:7px !important}
+.gnb_my_li .gnb_my_content .gnb_edit_lst:after{display:block;clear:both;content:''}
+.gnb_my_li .gnb_my_content .gnb_edit_lst li{float:left;padding-left:6px;margin-left:5px;background-position:-290px -25px}
+.gnb_my_li .gnb_my_content .gnb_edit_lst li.gnb_info{padding-left:0;margin-left:0;background:none}
+.gnb_my_li .gnb_my_content .gnb_edit_lst a{color:#666 !important;letter-spacing:-1px}
+.gnb_my_li .gnb_my_content .gnb_membership {display: inline-block;margin-right: 5px;margin-left: 1px;padding-right: 8px;background-position: -287px -403px;}
+.gnb_my_li .gnb_my_content .gnb_pay_check{height:16px;margin:7px -4px 0 0 !important}
+@media screen and (min-width: 0\0) { .gnb_my_li .gnb_my_content .gnb_pay_check{margin-top:17px} }
+.gnb_my_li .gnb_my_content .gnb_pay_check em{display:inline-block;width:16px;height:16px;background-position:-300px -309px;margin:0 4px 0 0;overflow:hidden;font-size:0;line-height:0;vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_pay_check a{font-size:14px;letter-spacing:-1px;line-height:16px;vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_pay_check span{font-weight: bold;}
+.gnb_my_li .gnb_my_content .gnb_pay_check strong{font-family:tahoma;letter-spacing:0;vertical-align:top;}
+.gnb_my_li .gnb_my_content .gnb_pay_check a, .gnb_my_li .gnb_my_content .gnb_pay_check span, .gnb_my_li .gnb_my_content .gnb_pay_check strong{font-size:12px;color:#222 !important}
+#gnb .gnb_my_li .gnb_my_community{clear:both;zoom:1}
+#gnb .gnb_my_li .gnb_my_community:after{display:block;clear:both;content:''}
+#gnb .gnb_my_li .gnb_my_community a{float:left;width:106px;margin-right: 0;border-right:1px solid #ebebeb}
+#gnb .gnb_my_li .gnb_my_community a.gnb_pay{width:102px;border-right:0;line-height:0}
+#gnb .gnb_my_li .gnb_my_community a.gnb_pay span{display:inline-block;width:41px;height:16px;background-position:-300px -334px;margin:11px auto 0;font-size:0;line-height:0}
+#gnb .gnb_my_li .gnb_my_community a:active, #gnb .gnb_my_li .gnb_my_community a:focus, #gnb .gnb_my_li .gnb_my_community a:visited{text-decoration:none !important}
+#gnb .gnb_my_li .gnb_my_community a:hover{text-decoration:underline !important}
+#gnb .gnb_my_lyr.gnb_longid1 .gnb_my_community a{/*width:105px;*/}
+#gnb .gnb_my_lyr.gnb_longid1 .gnb_my_community a.gnb_pay{/* width:106px;*/}
+#gnb .gnb_my_lyr.gnb_longid2 .gnb_my_community a{width:115px}
+#gnb .gnb_my_lyr.gnb_longid2 .gnb_my_community a.gnb_pay{width:116px}
+#gnb.gnb_one .gnb_my_community a, #gnb.gnb_one_small .gnb_my_community a{margin-right: 0 !important;}
+.gnb_notice_li a.gnb_notice{display:block;width:15px;height:17px;padding:7px 9px 4px;text-decoration:none !important}
+.gnb_notice_li a.gnb_notice .gnb_ico_num{left:1px;top:0}
+.gnb_notice_li a.gnb_notice .gnb_icon{display:block;width:15px;height:17px;background-position:-3px -60px}
+.gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-38px -60px;text-decoration:none !important}
+.gnb_notice_li .gnb_notice_lyr{display:none;position:absolute;top:26px;right:-7px;width:297px;height:330px;padding:9px 4px 4px;background-position:-2px -584px;z-index:10;overflow:hidden}
+.gnb_notice_li .svc_scroll{height:291px;overflow:scroll;overflow-x:hidden;position:relative;zoom:1}
+.gnb_notice_li .svc_panel{width:100%;height:330px;overflow:hidden}
+.gnb_notice_li .svc_head{position:relative;height:36px;padding-left:15px;line-height:20px;border-bottom:1px solid #eaeaea;zoom:1}
+.gnb_notice_li .svc_head .gnb_tit{color:#6b6d70;margin-right:1px;line-height:36px}
+.gnb_notice_li .svc_head .task_right{position:absolute;right:8px;top:8px;font-size:0}
+.gnb_notice_li .svc_head .task_right button{height:20px;padding:0 6px;margin-left:4px;border:1px solid #ddd;color:#888;background-color:#fff;font-family:'나눔고딕', NanumGothic;font-size:12px;letter-spacing:-1px;line-height:18px;*line-height:16px;overflow:visible}
+.gnb_notice_li .svc_list .gnb_btn_remove i, .gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_noti .gnb_ico_mail, .gnb_notice_li .svc_blank .svc_msg_box, .gnb_notice_li .svc_blank .gnb_v_guide{display:inline-block;*display:inline;*zoom:1}
+.gnb_notice_li .svc_list{margin-top:-1px}
+.gnb_notice_li .svc_list li{position:relative;padding:7px 34px 7px 15px;border-top:1px solid #eaeaea;line-height:18px}
+.gnb_notice_li .svc_list .gnb_new{background:#ffffd8}
+.gnb_notice_li .svc_list .gnb_unread .gnb_subject{color:#444}
+.gnb_notice_li .svc_list .gnb_unread .d_cnt{color:#ff630e}
+.gnb_notice_li .svc_list .gnb_unread a:hover .gnb_subject, .gnb_notice_li .svc_list .gnb_unread .gnb_unread a:hover .d_cnt{color:#390}
+.gnb_notice_li .svc_list .gnb_unread .svc_name{color:#444}
+.gnb_notice_li .svc_list a.gnb_list_cover{text-decoration:none !important;display:block;position:relative;zoom:1}
+.gnb_notice_li .svc_list a:hover .gnb_subject{text-decoration:underline}
+.gnb_notice_li .svc_list .gnb_subject{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;color:#adadad}
+.gnb_notice_li .svc_list .d_cnt{font-family:tahoma;font-size:10px}
+.gnb_notice_li .svc_list .gnb_info{color:#adadad}
+.gnb_notice_li .svc_list .svc_name{margin-right:3px;color:#adadad}
+.gnb_notice_li .svc_list .cchr{margin-right:3px}
+.gnb_notice_li .svc_list .dona{position:absolute;top:8px;right:34px;text-decoration:underline}
+.gnb_notice_li .svc_list .dona a{color:#adadad}
+.gnb_notice_li .svc_list .dona a:hover{color:#390}
+.gnb_notice_li .svc_list .gnb_ico_mail{width:14px;height:15px;font-size:0;line-height:0;color:#fff;vertical-align:top}
+.gnb_notice_li .svc_list .gnb_ico_mail.gnb_yes{background-position:-245px -17px}
+.gnb_notice_li .svc_list .gnb_ico_mail.gnb_no{background-position:-245px 4px}
+.gnb_notice_li .svc_list .gnb_btn_remove{position:absolute;right:4px;top:50%;z-index:100;margin-top:-13px;padding:10px;line-height:6px;font-size:0;background:none !important;border:0 !important}
+.gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_list .gnb_btn_remove i{display:block !important;width:7px;height:7px;font-size:0;line-height:0;color:transparent;white-space:nowrap;overflow:hidden;vertical-align:top;background-position:-175px 0}
+.gnb_notice_li .svc_blank{position:absolute;top:104px;left:0;width:100%;white-space:nowrap;height:100px;font-size:0;text-align:center}
+.gnb_notice_li .svc_blank .svc_msg_box{white-space:normal;font-size:12px;width:100%}
+.gnb_notice_li .svc_blank .gnb_tit{display:block;color:#2f3743;font-size:14px;margin:0 0 15px}
+.gnb_notice_li .svc_blank .gnb_tit strong{font-weight:normal;color:#390}
+.gnb_notice_li .svc_blank .gnb_desc{line-height:19px;color:#2f3743;margin-bottom:7px}
+.gnb_notice_li .svc_blank .gnb_desc a, .gnb_notice_li .svc_blank .gnb_link{color:#390;text-decoration:underline}
+.gnb_notice_li .svc_blank .gnb_v_guide{vertical-align:middle;height:100%;width:0}
+.gnb_notice_li .svc_blank .gnb_link_wrap{text-align:center}
+.gnb_notice_li .svc_blank .gnb_link_wrap .gnb_link{display:block;width:40px;margin:0 auto !important;text-align:center}
+.gnb_notice_li .svc_loading{background:url(https://ssl.pstatic.net/static/www/2014/loading.gif) no-repeat #fff center center;position:absolute;top:33px;left:0;width:100%;height:245px}
+.gnb_notice_li .gnb_error{position:absolute;top:81px;left:2px;width:100%;color:#444;text-align:center}
+.gnb_notice_li .gnb_error .gnb_ico_error{display:inline-block;width:57px;height:57px;background-position:-280px -190px}
+.gnb_notice_li .gnb_error .gnb_tit{font-size:14px;margin:15px 0 11px}
+.gnb_notice_li .gnb_error .gnb_desc{margin-bottom:13px;line-height:18px}
+.gnb_notice_li .gnb_error .gnb_link{text-decoration:underline}
+.gnb_ly_alert{position:absolute;top:110px;left:13px;background-color:#fff;border:1px solid #b7b9bc;width:260px;padding:34px 0 20px;zoom:1;z-index:100}
+.gnb_ly_alert .gnb_msg{text-align:center;line-height:17px;margin-bottom:14px;color:#2f3743}
+.gnb_.ly_alert .gnb_btn_close{position:absolute;right:2px;top:0;*overflow:visible}
+.gnb_ly_alert .gnb_btns{text-align:center}
+.gnb_ly_alert .gnb_btns button{height:27px;line-height:27px;*line-height:22px;font-weight:bold;font-size:12px;padding:0 8px;color:#2f3743;border:1px solid #ddd;background-color:white}
+.gnb_ly_alert .gnb_btns button:first-child{margin-right:4px}
+.gnb_ly_alert .gnb_btn_close{position:absolute;right:2px;top:0;width:35px;border:0;background:none;cursor:pointer;border-radius:0;padding:10px}
+.gnb_ly_alert .gnb_btn_close i{display:block;width:15px;height:15px;font:0/0 a;color:transparent;white-space:nowrap;overflow:hidden;vertical-align:top;background-position:-240px -60px}
+.mail_li a.gnb_mail{display:block;width:20px;height:15px;padding:7px 9px 6px;text-decoration:none !important}
+.mail_li a.gnb_mail .gnb_icon{display:block;width:20px;height:15px;background-position:0px -95px}
+.mail_li a.gnb_mail:hover .gnb_icon{background-position:-35px -95px;text-decoration:none !important}
+.mail_li .gnb_ico_num{left:6px;top:0}
+.gnb_service_li{margin-right:0}
+.gnb_service_li a.gnb_service{display:block;width:16px;height:16px;padding:7px 9px 5px}
+.gnb_service_li a.gnb_service .gnb_icon{display:block;width:16px;height:16px;background-position:-2px -130px}
+.gnb_service_li a.gnb_service:hover .gnb_icon{background-position:-37px -130px;text-decoration:none !important}
+.gnb_service_li .gnb_service_lyr{display:none;position:absolute;top:27px;right:-7px;z-index:10}
+.gnb_favorite_search{width:301px;letter-spacing:-1px}
+.gnb_response .gnb_favorite_search{display:none}
+.gnb_favorite_area{height:93px;padding:8px 4px 0;background-position:0 0}
+.gnb_favorite_lstwrp{position:relative;padding:22px 1px 15px 15px;border-bottom:1px solid #ebebeb}
+.gnb_favorite_lstwrp .gnb_my_interface{top:3px !important;right:3px !important}
+.gnb_first_visit{position:absolute;top:0;left:0;width:293px;height:92px;background-position:0 -310px;z-index:200}
+.gnb_first_visit .gnb_close{position:absolute;top:0;right:0;display:block;width:32px;height:32px}
+.gnb_favorite_lst{zoom:1}
+.gnb_favorite_lst:after{display:block;clear:both;content:''}
+.gnb_favorite_lst li{float:left;width:65px;text-align:center;white-space:nowrap}
+.gnb_favorite_lst a{display:inline-block;text-align:center;font-weight:bold}
+.gnb_favorite_lst .gnb_add a{display:block;test-align:center;}
+.gnb_favorite_lst .gnb_add a span.ic_add{display:block;width:36px;height:36px;margin:0 auto 4px;background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: 0px 0px;background-repeat: no-repeat;width: 36px;height: 36px;vertical-align: top;}
+.gnb_favorite_lst .gnb_add a:hover span.ic_add{background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: -42px 0px;background-repeat: no-repeat;width: 36px;height: 36px;vertical-align: top;}
+.gnb_favorite_lst img{display:block;margin:0 auto 4px;vertical-align:top}
+.gnb_search_area{position:relative;z-index:200;padding:18px 4px 17px;background-position:-301px 0;background-repeat:repeat-y}
+.gnb_search_box{position:relative;z-index:101;margin:0 12px 16px 0;padding-left:10px;display:block;width:270px;height:35px;background-position:10px -190px}
+.gnb_search_box.over{background-position:10px -230px}
+.gnb_search_box.fcs{background-position:10px -270px}
+.gnb_search_box.fcs input{width:200px;font-size:16px;font-weight:bold;color:#444;outline:0}
+.gnb_search_box input{float:left;display:block;width:210px;height:22px;margin-top:6px;padding-left:10px;font-family:'나눔고딕',NamumGothic;letter-spacing:-1px;color:#adadad;font-size:13px;border:0;line-height:22px;background:transparent}
+.gnb_search_box .gnb_del_txt{position:absolute;top:8px;right:32px;display:block;width:17px;height:17px;background-position:-190px 0px}
+.gnb_search_box .gnb_del_txt:hover{background-position:-190px -20px}
+.gnb_search_box .gnb_pop_input{position:absolute;top:34px;left:10px;width:268px;height:170px;*height:172px;border:1px solid #cbc5c5;border-top:0;background:#fff;overflow-x:hidden;overflow-y:scroll;z-index:110}
+.gnb_search_box .gnb_pop_lst{padding:4px 0 2px}
+.gnb_search_box .gnb_pop_lst a{display:block;padding:6px 0 6px 10px;font-weight:bold}
+.gnb_search_box .gnb_pop_lst .on{background-color:#f5f5f5}
+.gnb_search_lstwrp{zoom:1;height:118px;padding-left:12px}
+.gnb_search_lstwrp:after{display:block;clear:both;content:''}
+.gnb_search_lstwrp .gnb_search_lst{float:left;width:69px;border-left:1px solid #eaeaea}
+.gnb_search_lstwrp .gnb_search_lst.gnb_first{width:64px;border:0}
+.gnb_search_lstwrp li{padding:12px 0 0 8px}
+.gnb_search_lstwrp li.gnb_first{font-weight:bold;padding-top:0}
+.gnb_search_lstwrp li a{display:inline-block;vertical-align:top}
+.gnb_banner{height:47px;margin:0;padding:0 18px;background-position:-301px 0;background-repeat:repeat-y}
+.gnb_banner .gnb_service_event{display:inline-block;border-top:1px solid #ebebeb}
+.gnb_linkwrp{padding:0 4px 4px;background-position:-602px 0}
+a.gnb_service_all:hover, a.gnb_service_all:visited, a.gnb_service_all:active, a.gnb_service_all:focus{text-decoration:none}
+.gnb_svc_more{display:none;position:absolute;top:4px;right:303px;width:589px;overflow:hidden;zoom:1;z-index:1000}
+.gnb_svc_more:after{display:block;clear:both;content:''}
+.gnb_response .gnb_svc_more{right:2px}
+.gnb_bg_top{height:6px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) no-repeat}
+.gnb_bg_btm{position:relative;height:6px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) no-repeat -1282px 0}
+.gnb_svc_more .gnb_svc_hd{position:relative;padding:0 18px 2px 23px;letter-spacing:-1px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0}
+.gnb_svc_more .gnb_svc_hd .gnb_svc_tit{display:block;padding:12px 0 13px;border-bottom:1px solid #ebebeb;font-size:14px;color:#222}
+.gnb_svc_more .gnb_svc_hd .link{position:absolute;top:14px;right:19px;font-size:12px;color:#444}
+.gnb_svc_more .gnb_svc_hd .link a{color:#444 !important;line-height:16px !important}
+.gnb_svc_more .gnb_svc_lstwrp{position:relative;height:283px;overflow:hidden;padding:15px 15px 0 20px;letter-spacing:-1px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0;zoom:1}
+.gnb_svc_more .gnb_svc_lstwrp:after{display:block;clear:both;content:''}
+.gnb_svc_more .gnb_svc_lstwrp li{height:15px;margin-bottom:5px;color:#6b6d70;white-space:nowrap;line-height:15px}
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event label{color:#444;font-weight:bold}
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new{display:inline-block;width:11px;height:11px;background-position:-215px 0px;margin:2px 0 0 4px;font-size:0;line-height:0;vertical-align:top}
+@media screen and (min-width: 0\0) { .gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic{margin-top:3px} }
+.gnb_svc_more .gnb_svc_lstwrp .gnb_input_check{width:13px;height:13px;margin:2px 3px 0 3px;padding:0;vertical-align:top;-webkit-appearance:checkbox;}
+.gnb_svc_more .gnb_svc_lstwrp label{vertical-align:0px}
+.gnb_svc_more .gnb_svc_lstwrp .gnb_disabled strong{color:#a8acb0}
+.gnb_svc_more .gnb_svc_lstwrp .gnb_disabled li{color:#cbcbcb}
+.gnb_svc_more .gnb_svc_lst1{float:left;width:328px;height:280px}
+.gnb_svc_more .gnb_svc_lst1 ul{float:left;width:102px;min-height:260px;padding:5px 0 0 10px;border-left:1px solid #eee}
+.gnb_svc_more .gnb_svc_lst1 ul.gnb_first{padding-left:0;border:0}
+.gnb_svc_more .svc_lst2{float:left;position:relative;width:221px;border:1px solid #eee;background:#fbfbfb;zoom:1}
+.gnb_svc_more .svc_lst2:after{display:block;clear:both;content:''}
+.gnb_svc_more .svc_spc{float:left;position:relative;width:100px;min-height:254px;padding:9px 0 0 10px}
+.gnb_svc_more .svc_spc.gnb_first{border-right:1px solid #eee}
+.gnb_svc_more .svc_spc strong{height:20px;color:#2f3743;line-height:16px}
+.gnb_svc_more .svc_spc a:visited{color:#2f3743}
+.gnb_svc_more .svc_spc ul{padding:8px 0}
+.gnb_svc_more .svc_spc li{margin-bottom:0;padding-bottom:5px;color:#848689}
+.gnb_svc_more .svc_stroy{width:89px;margin-top:-5px;padding:12px 0 0;border-top:1px solid #eee}
+.gnb_svc_more .svc_btns{position:relative;height:33px;overflow:hidden;padding-top:5px;line-height:normal}
+.gnb_svc_more .svc_btnwrp{position:relative;*height:39px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0;padding:0 2px 0 4px}
+.gnb_svc_more .svc_btnwrp button{display:inline-block;width:60px;height:25px;border:0;vertical-align:top}
+.gnb_svc_more .svc_btnwrp .gnb_save{background-position:0 -160px}
+.gnb_svc_more .svc_btnwrp .gnb_close{margin-left:1px;background-position:-65px -160px}
+.gnb_svc_more .svc_btnwrp .gnb_return{position:absolute;top:5px;left:15px;background-position:-130px -160px}
+.gnb_type2 .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-155px -120px}
+.gnb_type2 .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-155px -140px}
+.gnb_type2 .gnb_service_li .gnb_service .gnb_icon{background-position:-200px -120px}
+.gnb_type2 .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-200px -140px}
+.gnb_type2 .mail_li a.gnb_mail .gnb_icon{background-position:-175px -120px}
+.gnb_type2 .mail_li a.gnb_mail:hover .gnb_icon{background-position:-175px -140px}
+.gnb_dark .gnb_my_li .gnb_my .gnb_name, .gnb_dark .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+.gnb_dark .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-220px -140px}
+.gnb_dark .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-220px -120px}
+.gnb_dark .mail_li a.gnb_mail .gnb_icon{background-position:-238px -141px}
+.gnb_dark .mail_li a.gnb_mail:hover .gnb_icon{background-position:-238px -121px}
+.gnb_dark .gnb_service_li .gnb_service .gnb_icon{background-position:-261px -140px}
+.gnb_dark .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-261px -120px}
+.gnb_dark_type2 .gnb_my_li .gnb_my .gnb_name, .gnb_dark_type2 .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+.gnb_dark_type2 .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-220px -120px}
+.gnb_dark_type2 .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-220px -140px}
+.gnb_dark_type2 .mail_li a.gnb_mail .gnb_icon{background-position:-238px -121px}
+.gnb_dark_type2 .mail_li a.gnb_mail:hover .gnb_icon{background-position:-238px -141px}
+.gnb_dark_type2 .gnb_service_li .gnb_service .gnb_icon{background-position:-261px -120px}
+.gnb_dark_type2 .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-261px -140px;}
+.gnb_dark .gnb_notice_li a.gnb_notice, .gnb_dark_type2 .gnb_notice_li a.gnb_notice {width: 17px;height: 19px;padding: 6px 8px 3px;}
+.gnb_dark .gnb_notice_li a.gnb_notice .gnb_icon, .gnb_dark_type2 .gnb_notice_li a.gnb_notice .gnb_icon {width: 17px;height: 19px;}
+.gnb_dark .mail_li a.gnb_mail, .gnb_dark_type2 .mail_li a.gnb_mail {width: 22px;height: 16px;padding: 7px 8px 4px;}
+.gnb_dark .mail_li a.gnb_mail .gnb_icon, .gnb_dark_type2 .mail_li a.gnb_mail .gnb_icon {width: 22px;height: 16px;}
+.gnb_dark .gnb_service_li a.gnb_service, .gnb_dark_type2 .gnb_service_li a.gnb_service {width: 18px;height: 18px;padding: 6px 8px 4px;}
+.gnb_dark .gnb_service_li .gnb_service .gnb_icon, .gnb_dark_type2 .gnb_service_li .gnb_service .gnb_icon {width: 18px;height: 18px;}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+#gnb.gnb_one .gnb_login_li, #gnb.gnb_one_small .gnb_login_li {height: 28px;}
+#gnb.gnb_one .gnb_login_li .gnb_btn_login, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login, #gnb.gnb_one .gnb_login_li .gnb_bg, #gnb.gnb_one_small .gnb_login_li .gnb_bg, #gnb.gnb_one .gnb_login_li .gnb_bdr, #gnb.gnb_one_small .gnb_login_li .gnb_bdr, #gnb.gnb_one .gnb_login_li .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_txt {width: 53px;height: 23px;}
+#gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_txt {top: -1px;width: 53px;height: 23px;line-height: 28px;font-size: 11px;}
+#gnb.gnb_one .gnb_login_li, #gnb.gnb_one_small .gnb_login_li, #gnb.gnb_one .gnb_my_li, #gnb.gnb_one_small .gnb_my_li, #gnb.gnb_one .gnb_notice_li, #gnb.gnb_one_small .gnb_notice_li, #gnb.gnb_one .mail_li, #gnb.gnb_one_small .mail_li, #gnb.gnb_one .gnb_service_li, #gnb.gnb_one_small .gnb_service_li{margin-right: 0;margin-left: 0; background: url(https://ssl.pstatic.net/static/common/gnb/bg_one_line.png) repeat-y right 0;}
+#gnb.gnb_one .gnb_login_li a, #gnb.gnb_one_small .gnb_login_li a, #gnb.gnb_one .gnb_my_li a, #gnb.gnb_one_small .gnb_my_li a, #gnb.gnb_one .gnb_notice_li a, #gnb.gnb_one_small .gnb_notice_li a, #gnb.gnb_one .mail_li a, #gnb.gnb_one_small .mail_li a, #gnb.gnb_one .gnb_service_li a, #gnb.gnb_one_small .gnb_service_li a {margin-right: 1px;}
+#gnb.gnb_one .gnb_login_li.hover .gnb_service, #gnb.gnb_one_small .gnb_login_li.hover .gnb_service, #gnb.gnb_one .gnb_login_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_login_li.hover .gnb_notice, #gnb.gnb_one .gnb_login_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_login_li.hover .gnb_mail, #gnb.gnb_one .gnb_login_li.hover .gnb_service, #gnb.gnb_one_small .gnb_login_li.hover .gnb_service, #gnb.gnb_one .gnb_my_li.hover .gnb_service, #gnb.gnb_one_small .gnb_my_li.hover .gnb_service, #gnb.gnb_one .gnb_my_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_my_li.hover .gnb_notice, #gnb.gnb_one .gnb_my_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_my_li.hover .gnb_mail, #gnb.gnb_one .gnb_my_li.hover .gnb_service, #gnb.gnb_one_small .gnb_my_li.hover .gnb_service, #gnb.gnb_one .gnb_notice_li.hover .gnb_service, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_service, #gnb.gnb_one .gnb_notice_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_notice, #gnb.gnb_one .gnb_notice_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_mail, #gnb.gnb_one .gnb_notice_li.hover .gnb_service, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_service, #gnb.gnb_one .mail_li.hover .gnb_service, #gnb.gnb_one_small .mail_li.hover .gnb_service, #gnb.gnb_one .mail_li.hover .gnb_notice, #gnb.gnb_one_small .mail_li.hover .gnb_notice, #gnb.gnb_one .mail_li.hover .gnb_mail, #gnb.gnb_one_small .mail_li.hover .gnb_mail, #gnb.gnb_one .mail_li.hover .gnb_service, #gnb.gnb_one_small .mail_li.hover .gnb_service, #gnb.gnb_one .gnb_service_li.hover .gnb_service, #gnb.gnb_one_small .gnb_service_li.hover .gnb_service, #gnb.gnb_one .gnb_service_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_service_li.hover .gnb_notice, #gnb.gnb_one .gnb_service_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_service_li.hover .gnb_mail, #gnb.gnb_one .gnb_service_li.hover .gnb_service, #gnb.gnb_one_small .gnb_service_li.hover .gnb_service {background: url(https://ssl.pstatic.net/static/common/gnb/bg_one_hover.png) repeat 0 0;}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name{margin:0 0 0 1px;}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice{width:17px;height:19px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice .gnb_icon, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice .gnb_icon{width:17px;height:19px;background-position:-284px -119px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice:hover .gnb_icon, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-284px -119px}
+#gnb.gnb_one .mail_li a.gnb_mail, #gnb.gnb_one_small .mail_li a.gnb_mail{width:21px;height:17px}
+#gnb.gnb_one .mail_li a.gnb_mail .gnb_icon, #gnb.gnb_one_small .mail_li a.gnb_mail .gnb_icon{width:21px;height:17px;background-position:-302px -120px}
+#gnb.gnb_one .mail_li a.gnb_mail:hover .gnb_icon, #gnb.gnb_one_small .mail_li a.gnb_mail:hover .gnb_icon{background-position:-302px -120px}
+#gnb.gnb_one .gnb_service_li .gnb_service, #gnb.gnb_one_small .gnb_service_li .gnb_service{width:17px;height:17px}
+#gnb.gnb_one .gnb_service_li .gnb_service .gnb_icon, #gnb.gnb_one_small .gnb_service_li .gnb_service .gnb_icon{width:17px;height:17px;background-position:-324px -120px}
+#gnb.gnb_one .gnb_service_li .gnb_service:hover .gnb_icon, #gnb.gnb_one_small .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-324px -120px}
+#gnb.gnb_one .gnb_my_lyr, #gnb.gnb_one_small .gnb_my_lyr, #gnb.gnb_one .gnb_notice_lyr, #gnb.gnb_one_small .gnb_notice_lyr, #gnb.gnb_one .gnb_service_lyr, #gnb.gnb_one_small .gnb_service_lyr {right: 7px;}
+#gnb.gnb_one .gnb_ico_num, #gnb.gnb_one_small .gnb_ico_num{width:34px;top:10px;right:3px;left:auto;vertical-align:top}
+#gnb.gnb_one .gnb_ico_num .gnb_ico_new, #gnb.gnb_one_small .gnb_ico_num .gnb_ico_new{vertical-align:top;height:13px;background-position:-332px -60px;}
+#gnb.gnb_one .gnb_ico_num .gnb_count, #gnb.gnb_one_small .gnb_ico_num .gnb_count {height: 13px;padding: 0 6px 0 2px;background-position: 100% -60px;font-size: 10px;font-weight: normal;}
+#gnb.gnb_one .gnb_ico_num .plus, #gnb.gnb_one_small .gnb_ico_num .plus{margin:1px 0 0 2px}
+#gnb.gnb_one .ico_arrow{top:48px}
+#gnb.gnb_one .gnb_my_lyr, #gnb.gnb_one .gnb_notice_lyr{top:47px}
+#gnb.gnb_one .gnb_service_lyr{top:48px;}
+#gnb.gnb_one .gnb_login_li{padding:16px 21px 10px 1px;}
+#gnb.gnb_one .gnb_my_li{padding:12px 20px 12px 2px}
+#gnb.gnb_one .gnb_my_li .ico_arrow{top:34px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice{padding:18px 19px 17px 19px}
+#gnb.gnb_one .mail_li a.gnb_mail{padding:19px 17px 18px 17px}
+#gnb.gnb_one .gnb_service_li .gnb_service{padding:19px 19px 18px 19px}
+#gnb.gnb_one_small .ico_arrow{top:33px}
+#gnb.gnb_one_small .gnb_my_lyr, #gnb.gnb_one_small .gnb_notice_lyr{top:32px}
+#gnb.gnb_one_small .gnb_service_lyr{top:33px}
+#gnb.gnb_one_small .gnb_login_li{padding:7px 12px 4px 2px}
+#gnb.gnb_one_small .gnb_my_li{padding:5px 20px 4px 2px}
+#gnb.gnb_one_small .gnb_my_li .ico_arrow{top:27px}
+#gnb.gnb_one_small .gnb_notice_li a.gnb_notice{padding:10px 11px 10px 12px}
+#gnb.gnb_one_small .mail_li a.gnb_mail{padding:11px 10px 11px 9px}
+#gnb.gnb_one_small .gnb_service_li .gnb_service{padding:11px 12px 11px 11px}
+#gnb.gnb_one_small .gnb_ico_num{top:5px;right:6px;width:24px}
+#gnb.gnb_one_flat .gnb_login_li,
+#gnb.gnb_one_flat .gnb_my_li,
+#gnb.gnb_one_flat .gnb_notice_li,
+#gnb.gnb_one_flat .mail_li,
+#gnb.gnb_one_flat .gnb_service_li {border-color: #e0e0e0;}
+#gnb.gnb_one_flat .gnb_notice_li.hover,
+#gnb.gnb_one_flat .mail_li.hover,
+#gnb.gnb_one_flat .gnb_service_li.hover {background-color: rgba(0, 0, 0, 0.04);}
+#gnb.gnb_one_flat .gnb_service_li .gnb_service .gnb_icon,
+#gnb.gnb_one_flat .gnb_service_li .gnb_service:hover .gnb_icon {background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: -84px -24px;background-repeat: no-repeat; width: 16px;height: 16px;vertical-align: top; margin: 0 1px;}
+#gnb.gnb_one_flat .mail_li a.gnb_mail .gnb_icon,
+#gnb.gnb_one_flat .mail_li a.gnb_mail:hover .gnb_icon {background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: 0px -42px;background-repeat: no-repeat;width: 20px;height: 16px;vertical-align: top;margin: 0 1px;}
+#gnb.gnb_one_flat .gnb_notice_li a.gnb_notice .gnb_icon,
+#gnb.gnb_one_flat .gnb_notice_li a.gnb_notice:hover .gnb_icon {background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: -84px 0px;background-repeat: no-repeat;width: 16px;height: 18px;vertical-align: top;margin: 0 1px;}
+#gnb.gnb_one_flat .gnb_my_li .gnb_my .gnb_name,
+#gnb.gnb_one_flat .gnb_login_li .gnb_btn_login .gnb_txt {color: #666;}</style>
+	<script src="{% static 'js/clickcrD.js' %}" id="gnb_clickcrD" charset="utf-8"></script>
+</head>
+
+<body class="a body_press as_body_type_a  _font_size_setting_target bfsize1" style="color: #1641A8;">
+
+<script>
+		(function(){
+			try{
+				var settingTarget = document.querySelector('._font_size_setting_target');
+				var defaultFontSize = /(?:\s|^)?NFS=(\d)(?:;|$)/.test(document.cookie)? RegExp.$1: '2';
+				var newFontSizeClass = 'bfsize' + (parseInt(defaultFontSize)-1);
+				if(newFontSizeClass === 'bfsize0') {
+					return;
+				}
+
+				settingTarget.className = settingTarget.className + " " + newFontSizeClass;
+			}catch(e){}
+		})();
+		</script>
+
+<section class="news_header as_white_type">
+	<header class="nh_header" role="banner">
+		<div class="Ngnb">
+			<div class="Ngnb_inner">
+				<div class="Ngnb_both">
+					<div class="Ngnb_left">
+						<span class="Ngnb_logo">
+							<a class="Nlogo_link", href ="/">
+								<img src="{% static 'assets/spam.png' %}">
+							</a>
+						</span>
+						<div class="Ngnb_service">
+							<h1 class="Nservice_item">
+								<a  href ="/">
+									<span class="Nicon_service ">뉴스</span>
+								</a>
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</section>
+
+<hr>
+
+<div class="press_wrap">
+	<div class="press_container">
+		<section class="press_content">
+
+			<script>
+		function initShare() {
+			new news.JsLoader().setConfig({
+				'sCharSet': 'utf-8' // default
+			}).load(
+					['https://ssl.pstatic.net/spi/js/release/ko_KR/splugin.m.js?'],
+					function() {
+						window.__splugin = SocialPlugIn_Core({
+							// nEvent Key
+							"evKey"  : "news",
+							"dimmed" : "fixed",
+							"darkMode"    : isDarkShareLayer(),
+							"serviceName" : "뉴스",
+							"sourceName" : "",
+							"onClick"     : function(button) {},
+							"onShow"      : function() {},
+							"onHide"      : function() {},
+							"onResize"    : function(event) {},
+							"onRotate"    : function(event) {}
+						});
+					}
+			);
+		}
+
+		function initPressList() {
+			var cpType = 'News';
+			var popupUrl = '/press/popup?cpType=' + cpType;
+			var pressListPopup = new PressHomeMainManager.PressListPopup('._press_list_btn', {
+				selectedOfficeId: '056',
+				pressListPopupUrl: popupUrl,
+				wrapper: "._press_list_wrapper"
+			});
+
+			return pressListPopup;
+		}
+
+		function initPressHomeLnb(params) {
+			var officeId = '056';
+			var isChannelFollowerVisible = true;
+			var welMillionBadgeArea = $('._follower_count_million_badge');
+			var welFollowerLabel = $('._follower_label');
+			var isMillionBadgeVisible = welMillionBadgeArea.length > 0;
+			var isLiveViewer = $('.NAVER_APP_LIVE_VIEWER').length > 0;
+			var path = location.pathname;
+			var isLiveUrl = path.indexOf('/press/' + officeId + '/live') >= 0;
+
+			/* 채널구독수 */
+			if (isChannelFollowerVisible || isMillionBadgeVisible) {
+				var channelFollowerCount = new PressHomeMainManager.ChannelFollowerCount('._channel_follower_count', {
+					officeId: officeId,
+				});
+				if (isChannelFollowerVisible) {
+					channelFollowerCount.oPromise.then($.proxy(channelFollowerCount.renderFollowerCount, channelFollowerCount));
+
+					var incrementFollowerCount = function () {
+						channelFollowerCount.incrementAndRenderFollowerCount();
+					};
+
+					var decrementFollowerCount = function () {
+						channelFollowerCount.decrementAndRenderFollowerCount();
+					}
+				}
+
+				if (isMillionBadgeVisible) {
+					channelFollowerCount.oPromise.then(function (followerCount) {
+						var nFollowerCount = followerCount || 0;
+						var nFollowerCountInMillion = Math.floor(nFollowerCount / 1000000);
+						var nFollowerCountInMan = nFollowerCountInMillion * 100;
+						if (nFollowerCountInMillion < 1) {
+							if (!isChannelFollowerVisible) {
+								$(".press_hd_subscribe").remove();
+							}
+							return;
+						} else {
+							var sMillionClassName = 'as_' + ((nFollowerCountInMillion % 10 === 0) ? 10 : nFollowerCountInMillion % 10) + 'million';
+
+							welFollowerLabel.show();
+							welMillionBadgeArea.addClass(sMillionClassName)
+							welMillionBadgeArea.append(' <i class="press_ico">구독자수</i><em>' + nFollowerCountInMan + '</em>만').show();
+						}
+					});
+				}
+			}
+			/* 채널구독수 */
+
+			/* 채널구독버튼 */
+			var channelSubscribeButton = new PressHomeMainManager.ChannelSubscribeButton('._press_hd_subscribe_btnwrap', {
+				officeId: officeId,
+				buttonClassName: 'press_hd_subscribe_btn',
+				noLoginLayerTemplate: function() {
+					return news.Util.getTemplateRenderer(function () {/*!@preserve
+								<div class="press_hd_subscribe_layer_wrap as_tooltip _afterAdd" style="display: none;">
+									<div class="press_hd_subscribe_layer">
+										<p class="press_hd_subscribe_layer_title">메인 뉴스판에서 KBS 주요뉴스를 볼 수 있습니다.</p>
+										<div class="press_hd_subscribe_layer_btns">
+											<a href="#" onclick="goMainChannelUrl();" class="press_hd_subscribe_layer_btn">보러가기</a>
+										</div>
+									</div>
+								</div>
+						*/
+						return true;
+					});
+				},
+				commonLayerTemplate: function() {
+					return news.Util.getTemplateRenderer(function() {/*!@preserve
+								<div class="press_hd_subscribe_layer_wrap as_tooltip _afterRemove" style="display: none;">
+									<div class="press_hd_subscribe_layer">
+										<p class="press_hd_subscribe_layer_title"><strong>KBS</strong> 언론사 구독 해지되었습니다.</p>
+									</div>
+								</div>
+						*/
+						return true;
+					});
+				},
+				nclk_add: 'hom.take',
+				nclk_remove: 'hom.cancel',
+				nclk_info: 'hom.info',
+				onAddChannelSuccess: incrementFollowerCount,
+				onRemoveChannelSuccess: decrementFollowerCount,
+				needNotificationButton: true,
+				needNotificationConfirm: true
+			});
+			/* 채널구독버튼 */
+
+			/* 공유하기 */
+			if (!isLiveViewer && !isLiveUrl) {
+				initShare();
+			}
+			/* 공유하기 */
+
+			/* 뒤로버튼 */
+			var historyBackButton = new PressHomeMainManager.HistoryBackButton('._press_header ._back_btn');
+			/* 뒤로버튼 */
+
+			/* 언론사리스트 */
+			if (!isLiveViewer && !isLiveUrl) {
+				var pressListPopup = initPressList();
+			}
+			/* 언론사리스트 */
+
+			return {
+				channelFollowerCount: channelFollowerCount,
+				historyBackButton: historyBackButton,
+				channelSubscribeButton: channelSubscribeButton,
+				pressListPopup: pressListPopup
+			}
+		}
+
+
+			</script>
+
+			<script>
+		var profileData = {"notice":null,"relatedChannelContainer":{"totalSubscriberCount":1726248,"channelGroupList":[{"type":"NAVER_TV","channels":[{"type":"NAVER_TV","name":"KBS뉴스","subscriberCount":"13.6만","url":"https://tv.naver.com/kbsnews","channelPluginId":"604daeb8ccac2049db03f625","clickCode":"ptv","channelPluginFollowAvailable":true,"countLabel":"구독","logoImgUrl":"https://ssl.pstatic.net/static.news/image/news/m/2020/07/24/channel_tv.png","alternativeName":"네이버 TV","displayName":"KBS뉴스"}],"subscriberCount":"13.6만","channelsCount":1,"representativeChannel":{"type":"NAVER_TV","name":"KBS뉴스","subscriberCount":"13.6만","url":"https://tv.naver.com/kbsnews","channelPluginId":"604daeb8ccac2049db03f625","clickCode":"ptv","channelPluginFollowAvailable":true,"countLabel":"구독","logoImgUrl":"https://ssl.pstatic.net/static.news/image/news/m/2020/07/24/channel_tv.png","alternativeName":"네이버 TV","displayName":"KBS뉴스"}},{"type":"YOUTUBE","channels":[{"type":"YOUTUBE","name":"KBS News","subscriberCount":"159만","url":"https://www.youtube.com/channel/UCcQTRi69dsVYHN3exePtZ1A","channelPluginId":"604dadf2d5f55742251516de","clickCode":"pyoutube","channelPluginFollowAvailable":false,"countLabel":"구독","logoImgUrl":"https://ssl.pstatic.net/static.news/image/news/m/2020/07/24/channel_youtube.png","alternativeName":"youtube","displayName":"KBS News"}],"subscriberCount":"159만","channelsCount":1,"representativeChannel":{"type":"YOUTUBE","name":"KBS News","subscriberCount":"159만","url":"https://www.youtube.com/channel/UCcQTRi69dsVYHN3exePtZ1A","channelPluginId":"604dadf2d5f55742251516de","clickCode":"pyoutube","channelPluginFollowAvailable":false,"countLabel":"구독","logoImgUrl":"https://ssl.pstatic.net/static.news/image/news/m/2020/07/24/channel_youtube.png","alternativeName":"youtube","displayName":"KBS News"}}]},"talkTalkUrl":null,"statistics":null,"awards":[],"relatedChannelEmpty":false};
+		var billboardChartLibUrl = 'https://ssl.pstatic.net/static.news/mnews/resources/20220317_065710/js/generated/billboard.pkgd.min.js';
+
+		function initPressHomeTopLnb(params) {
+			var pressHomeLnb = initPressHomeLnb();
+
+			var officeId = '056';
+			var welOffceHomeTabList = $('._office_home_tab_list');
+			var pressHeader = $('._press_header');
+			var isTabPresent = welOffceHomeTabList.length > 0;
+
+			/* 플로팅 */
+			var _floatingConfig = {
+				sFixedContentSelector: '._fixed',
+				onInitialize: function() {
+					new PressHomeMainManager.ChannelSubscribeButton('._press_float_subscribe', {
+						officeId: officeId,
+						buttonClassName: 'press_float_subscribe_btn',
+						noLoginLayerTemplate: function() {
+							return news.Util.getTemplateRenderer(function () {/*!@preserve
+									<a href="javascript:;" onclick="goMainChannelUrl();" class="press_float_subscribe_layer _afterAdd" style="display: none;">
+										<span class="press_float_subscribe_layer_text">메인 뉴스판에서 KBS 주요뉴스를 볼 수 있습니다.</span>
+										<span class="press_float_subscribe_layer_link">보러가기</span>
+									</a>
+									*/
+								return true;
+							});
+						},
+						commonLayerTemplate: function() {
+							return news.Util.getTemplateRenderer(function() {/*!@preserve
+									<a href="javascript:;" onclick="return false;" class="press_float_subscribe_layer _afterRemove" style="display: none;">
+										<span class="press_float_subscribe_layer_text"><strong>KBS</strong> 언론사 구독 해지되었습니다.</span>
+									</a>
+									*/
+								return true;
+							});
+						},
+						nclk_add: 'prs_hom.take',
+						nclk_remove: 'prs_hom.cancel',
+						nclk_info: 'prs_hom.info',
+						onAddChannelSuccess: pressHomeLnb.channelSubscribeButton.onAddChannelSuccess,
+						onRemoveChannelSuccess: pressHomeLnb.channelSubscribeButton.onRemoveChannelSuccess
+					});
+				},
+				onStartFloating: function() {
+					pressHeader.addClass('is_invisible');
+				},
+				onStopFloating: function() {
+					pressHeader.removeClass('is_invisible');
+				}
+			};
+			if (isTabPresent) {
+				_floatingConfig.fnBoundary = function(){
+					return $("._start_floating").offset().top - $("._press_float").height();
+				}
+			} else {
+				_floatingConfig.sAfterContentSelector = '._press_header';
+			}
+			var floating = new PressHomeMainManager.Floating('._press_float', _floatingConfig);
+			/* 플로팅 */
+
+			/* 뒤로버튼 */
+			var historyBackButton = new PressHomeMainManager.HistoryBackButton('._press_float ._back_btn');
+			/* 뒤로버튼 */
+
+			return {
+				floating: floating,
+				pressHomeLnb: pressHomeLnb,
+				historyBackButton: historyBackButton
+			}
+		}
+
+
+			</script>
+
+			<div id="ct" role="main" class="press _start_floating" style="">
+
+				<script>
+			// NEW-23795
+			function addTabClassIfNecessary() {
+				var welTabScroll = $('._press_tab_scroll');
+				if (welTabScroll.length > 0) {
+					var welTabs = $('._office_home_tab_list').children();
+					var welSelectedTab = $('.press_section_tab_item[aria-selected=true]')
+
+					var nIndex = welTabs.index(welSelectedTab);
+					welTabScroll.removeClass('is_first').removeClass('is_last');
+					if (nIndex == 0) {
+						welTabScroll.addClass('is_first');
+					} else if (nIndex == welTabs.length - 1) {
+						welTabScroll.addClass('is_last');
+					}
+				}
+			}
+
+			function initPressHomeTab(params) {
+				var officeId = '056';
+
+				/* 탭 */
+				var welTabScroll = $('._press_tab_scroll');
+				if (welTabScroll.length > 0) {
+					// position 0 부터 시작한다. ("style 속성 자체를 지우면 스크롤이 적용되지 않는다" on iOS)
+					welTabScroll.children().eq(0).css('left', '0px');
+					var pressTabScroll = new news.Scroll("._press_tab_scroll");
+					// ._press_tab_scroll이 floating 상태에 따라 height값이 달라져 고정하지 않도록 설정
+					$("._press_tab_scroll").css("height", "");
+					var welSelectedTab = $('.press_section_tab_item[aria-selected=true]');
+					if (welSelectedTab.length > 0) {
+						pressTabScroll.scrollElToCenter(welSelectedTab);
+					}
+				}
+				/* 탭 */
+				addTabClassIfNecessary();
+
+				/* 섹션탭 클릭 */
+				var pressTabButton = new PressHomeMainManager.ButtonListener('._press_tab_btn', {
+					onClick: function (e) {
+						var tabType = $(e.currentTarget).data('tab-type');
+						var tabId = $(e.currentTarget).data('tab-id');
+						if (!(tabType === 'home' || tabType === 'link')) {
+							if (params && params.floating && params.floating.isFloating) {
+								e.currentTarget.hash = 'lnb';
+							}
+						}
+						if (tabId === 'Main') {
+							nclk(e, 'hom.mm', officeId, '');
+						} else if (tabId === 'NaverTvLive') {
+							nclk(e, 'hom.live', officeId, '');
+						} else if (tabId === 'Ranking') {
+							nclk(e, 'hom.rank',officeId,'');
+						} else if (tabId === 'Premium') {
+							nclk(e, 'hom.premium', officeId, '');
+						} else {
+							nclk(e, 'hom.section', officeId, '');
+						}
+					}
+				});
+				/* 섹션탭 클릭 */
+
+				return {
+					pressTabScroll: pressTabScroll,
+					pressTabButton: pressTabButton
+				}
+			}
+
+
+				</script>
+
+				<script>
+			/**
+			 * `focus to lnb` 대응 (url format: `some/url#lnb`)
+			 */
+			;(function(){
+				var isFocusToLnbMode = false;
+
+				// default 마크업 구성을 `focus to lnb` 로 하고 (floating lnb 로 구성),
+				// `focus to lnb` 접근이 아닐 경우 `floating lnb` 구성을 해제하는 컨셉. (to static 으로)
+				//
+				// default 마크업 구성을 `floating lnb` 로 한 이유:
+				// 1. `static lnb` 방식으로 하면,
+				// 2. `focus` 처리할 때 "화면 덜컹 거림이 보여서" 보기 좋지 않다.
+				//
+				// `focus` 요청일 경우,
+				// 필요한 추가 처리는 content 출력 후 처리돼있다. (e.g. scroll 이동)
+				if(location.hash === '#lnb'){
+					isFocusToLnbMode = true;
+				}
+
+				// "뒤로가기", "새로고침" 일 경우 focus 처리하지 않는다. (browser 에서 scroll 자동 이동 시키므로)
+				(function () {
+					var winNavigation = (window.performance && window.performance.navigation) || {};
+					var isReload = winNavigation.type === winNavigation.TYPE_RELOAD;
+					var isHistoryBack = winNavigation.type === winNavigation.TYPE_BACK_FORWARD;
+					// 상수를 지원하지 않을 경우도 focus 처리하지 않음
+					if(isHistoryBack || isReload || !winNavigation.TYPE_BACK_FORWARD){
+						isFocusToLnbMode = false;
+					}
+				})();
+
+				try{
+					// 서버 기본 설정이 `lnb floating + block' 이면 LNB 움직이는게 보여서 script 에서 block 되도록 했다.
+					document.querySelector('._press_float').style.display = '';
+					document.querySelector('._press_tab_scroll').style.display = '';
+				}catch(e){}
+
+				// 선택된 LNB 중앙 정렬 선처리 (onload 후 Scroll-UI 에서 중앙 정렬시 이동이 보이지 않게)
+				(function(){
+					try{
+						var lnb = document.querySelector('._press_tab_scroll');
+						var lnbScrollContent = lnb.firstElementChild;
+						var selectedItem = lnb.querySelector('li[aria-selected="true"]');
+						var maxScrollLeft = 0;
+						var selectedItemScrollLeft = 0;
+
+						// Scroll-UI 적용 전에 inline style 은 제거해 줘야 한다. (e.g. onload 후 적용 될 때)
+						lnbScrollContent.style.position = 'absolute';
+						maxScrollLeft = lnbScrollContent.clientWidth - lnb.clientWidth;
+						if(maxScrollLeft <= 0){ // lnb 가 content 보다 크다. (scroll 필요 없는 경우)
+							return;
+						}
+						selectedItemScrollLeft = Math.max(
+							0,
+							(selectedItem.offsetLeft || 0) -
+							((lnb.clientWidth - selectedItem.clientWidth) / 2)
+						);
+						selectedItemScrollLeft = Math.min(maxScrollLeft, selectedItemScrollLeft);
+						lnbScrollContent.style.left = -1 * Math.round(selectedItemScrollLeft) + 'px';
+					}catch(e){}
+				})();
+
+				// 1. focus mode 라면 서버 출력 마크업을 그대로 두고
+				// 2. 이후 처리는 content 출력 후 js 에서 하는 구조다.
+				if(isFocusToLnbMode){
+					return;
+				}
+
+				/**
+				 * `focus to lnb` 접근이 아니라면 `static lnb` 구성으로 마크업 변경
+				 */
+				try{
+					var header = document.querySelector('._press_header');
+					var headerFloat = document.querySelector('._press_float');
+					var lnb = document.querySelector('._press_tab_scroll');
+
+					header.style.display = '';
+					headerFloat.className = headerFloat.className.replace('is_fixed', '');
+					if(lnb){
+						lnb.className = lnb.className.replace('is_fixed', '');
+					}
+				}catch(e){}
+			})();
+
+
+				</script>
+
+				<script>
+				/**
+				 * `focus to lnb` 대응 (content 출력 후 추가 처리)
+				 */
+				;(function () {
+					try {
+						var startFloating = document.querySelector('._start_floating');
+						var header = document.querySelector('._press_header');
+						var lnbScrollPaddingTop = document.querySelector('._press_float').clientHeight;
+
+						// js 처리 관련 inline style 제거
+						window.addEventListener('load', function () {
+							document.querySelector('#ct').style.minHeight = '';
+						});
+
+						// display none 상태가 아니면 `focus to lnb` 접근이 아니다.
+						if (header.style.display !== 'none') {
+							return;
+						}
+						header.style.display = ''; // show header
+
+						var floatingOffset = startFloating.getBoundingClientRect().top + window.pageYOffset;
+						window.scrollTo(0, floatingOffset - lnbScrollPaddingTop);
+					}catch(e){}
+				})();
+
+
+				</script>
+
+				<div class="press_ranking_home">
+					<ul class="press_ranking_tab">
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/new/"><span>최신뉴스</span></a></li>
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/election/"><span>대선</span></a></li>
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/policy/"><span>정치</span></a></li>
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/economy/"><span>경제</span></a></li>
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/society/"><span>사회</span></a></li>
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/life/"><span>생활</span></a></li>
+						<li class="">
+							<a class="link_tab_item" , href="http://127.0.0.1:8000/world/"><span>세계</span></a></li>
+					</ul>
+
+					<div class="press_ranking_box" style="">
+						<ul class="press_ranking_list">
+						{% for num in list %}
+							<li class="as_thumb">
+								<a href="{{num.news_url}}"
+								   class="_es_pc_link" data-pc-link=""
+								   onclick="nclk(event, &#39;rnk.rnknws&#39;,&#39;&#39;,&#39;&#39;)">
+									<em class="list_ranking_num">{{forloop.counter}}</em>
+									<div class="list_content">
+										<strong class="list_title">{{num.title}}</strong>
+										<span class="list_view">
+											{{num.news_company}} > {{num.news_type}}
+
+										</span>
+									</div>
+								</a>
+							</li>
+						{% endfor %}
+						</ul>
+					</div>
+<div class="press_ranking_date" data-init-date="20220328">
+        <button type="button" class="button_date_prev" onclick="nclk(event, 'rnk.dateprv','','')"><span class="blind">이전 날짜</span></button>
+        <strong>2022. 3. 28. 월</strong>
+        <button type="button" class="button_date_next is_disabled" onclick="nclk(event, 'rnk.datenxt','','')" disabled="disabled"><span class="blind">다음 날짜</span></button>
+    </div>
+
+
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<hr>
+
+<div class="mp_footer">
+	<div class="f_maininfo">
+		<div class="f_maininfoinner">
+			<a href="javascript:;" class="r_pg_top _go_top" id="goTop" onclick="nclk(event, &#39;fot.pctop&#39;, &#39;&#39;, &#39;&#39;);">맨위로</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	/**
+	 * 이 파일은 모바일 뉴스 서비스 전체 페이지에 적용되는 스크립트로써,
+	 * 코드 추가 시 Front-End 성능 관점에서 주의를 요합니다.
+	 */
+	jQuery(window).on('load', function(){
+		setTimeout(onload, 10);
+
+		function onload(){
+			var oLnb = new news.Lnb('._lnb_scroll');
+			new news.ImageLazyLoader().load("img[data-src]");
+			new news.MoveTopButton("._go_top");
+
+
+			new news.HistoryManager().init("naver_mobile_news_history", "https://m.naver.com/");
+
+			// iframe lazy-loading
+			(function(){
+				try {
+					Array.prototype.slice.apply(document.querySelectorAll('iframe[data-src]'))
+						.forEach(function(iframeEl) {
+							var originSrc = iframeEl.getAttribute('data-src');
+							if(originSrc) {
+								iframeEl.setAttribute('src', originSrc);
+							}
+						});
+				}catch(e) {}
+			})();
+
+			if(typeof init === "function"){
+				init();
+			}
+
+			var cookie = news.Cookie.getInstance();
+			var isShownNewLnb = cookie.getItem("isShownNewLnb");
+			if(isShownNewLnb == null) {
+				isShownNewLnb = "Y";
+				cookie.setItem("isShownNewLnb", isShownNewLnb, 3650, "", "/");
+				$("._isNew").addClass("is_new");
+			}
+
+			{
+				var footerLogin = jQuery(document).find('._footer_login');
+				if(footerLogin <= 0) {
+					return;
+				}
+
+				// 디바이스에 따라 로그인, 로그아웃 URL 분기
+				var loginUrl = "https://nid.naver.com/nidlogin.login";
+				var logoutUrl = "https://nid.naver.com/nidlogin.logout?";
+				if (news.Util.getAgentInfo().bMobileOrTablet) {
+					loginUrl = "https://nid.naver.com/nidlogin.login?svctype=262144";
+					logoutUrl = "https://nid.naver.com/nidlogin.logout?svctype=262144&";
+				}
+
+				if(news.LoginAssistor.isLoginUser()) {
+					footerLogin.prepend('<a href="javascript:news.Util.logout(\''+logoutUrl+'url=\'+encodeURIComponent(location.href));" class="u_ftlk" id="news_logout" onclick="nclk(event,\'fot.logout\',\'\',\'\');" >로그아웃</a>')
+				}else {
+					footerLogin.prepend('<a href="'+loginUrl+'" class="u_ftlk" id="news_login" onclick="nclk(event,\'fot.login\',\'\',\'\');" >로그인</a>')
+				}
+			}
+		}
+	});
+	</script>
+
+<script>
+		/* LNB */
+		var pressHomeTopLnb = initPressHomeTopLnb();
+		/* LNB */
+
+		/* 탭 */
+		var pressHomeTab = initPressHomeTab({
+			floating: pressHomeTopLnb.floating
+		});
+		/* 탭 */
+
+		/* 프로필 영역 */
+		new news.PressHomeProfile()
+			.init({
+				billboardChartLibUrl: billboardChartLibUrl,
+				templateData: profileData
+			})
+			.on('toggleProfile', function(){
+				pressHomeTopLnb.floating.updateBoundary();
+			});
+		/* 프로필 영역 */
+
+		/* 채널플러그인 */
+		new news.ChannelPlugin()
+			.init({
+				channelPluginApiDomain: "https://api.channel-plugin.naver.com",
+				followLayerAutoCloseMs: 5000,
+				nclickPrefix: 'prs_hom'
+			});
+		/* 채널플러그인 */
+
+		var PressHomeRankingPage = new PressHomeRankingManager('popular', '056', {
+			'startServiceDate': '20201116'
+		});
+
+		changeLinkUrlForPc();
+
+		function changeLinkUrlForPc() {
+			$('a[data-pc-url]').each(function(index, aLink) {
+				if (isMobileDevice() === false) { // PC
+					aLink.href = aLink.getAttribute("data-pc-url");
+				}
+				aLink.removeAttribute("data-pc-url");
+			});
+		}
+	</script>
+
+<script>
+		var gnb_service = 'news';
+		var gnb_logout = encodeURIComponent(location.href);
+		var gnb_template = 'gnb_utf8';
+		var gnb_brightness = 1;
+
+		doAfterLoadEnd(function () {
+			try {
+				GlobalMPUrlManager.init();
+			} catch (e) {}
+		});
+
+		doAfterLoadEnd(function() {
+			if (!document.querySelector('#gnb') || isMobileDevice() === true) {
+				return;
+			}
+
+			var gnb_src = "https://ssl.pstatic.net/static.gn/templates/gnb_utf8?2022032214";
+
+			// GnbHelper를 이용하여 GNB Layer를 닫을 수 있도록 지원한다.
+			if (window.jindo) {
+				jindo.LazyLoading.load(
+					gnb_src,
+					function() {
+						try {
+							getGNB();
+						} catch(e) {}
+					},
+					'utf-8'
+				);
+
+				jindo.$Fn(function (oEvent) {
+
+					GnbHelper.attachClick(oEvent.$value().target);
+				}).attach(document, 'click');
+			} else if (window.jQuery) {
+				new news.JsLoader().
+					load(
+						[gnb_src],
+						function() {
+							try {
+								getGNB();
+							} catch(e) {}
+						}
+					);
+
+				$(document).on("click", function(event) {
+					GnbHelper.attachClick(event.target);
+				});
+			}
+		});
+	</script>
+
+<script>
+	doAfterLoadEnd(function() {
+		try {
+			new SearchAutoComplete({
+				content: document.querySelector("._search_content"),
+				contentToggleBtn: document.querySelector("._search_content_toggle_btn"),
+				isMobile: isMobileDevice(),
+				nClickType: "newsM"
+			});
+		} catch(e) {}
+	});
+	</script>
+
+<script type="text/javascript">
+
+	function initMa(){
+		var data = {
+			"service": "news",
+			"baseInfo": {
+				"category": (function(){
+
+					var result = "언론사홈";
+
+					if(result !== ""){
+						return result;
+					}
+					try{
+
+						return document.querySelector('meta[property="og:title"]')
+							.getAttribute('content')
+							.replace(/[\s]*:+[\s]*네이버[\s]*뉴스/, '');
+					}catch(e){
+						return "";
+					}
+				})()
+			},
+			"extraInfo": {}
+		};
+
+
+		data.extraInfo.officeId = "056";
+
+
+		try{
+			ma.init({
+				api: "https://ma.news.naver.com/l",
+				data: data
+			});
+		}catch(e){}
+	}
+	</script>
+
+<script type="text/javascript">
+
+	if(typeof BMR !== "undefined"){
+		BMR.run('https://sp.naver.com/sp');
+	}
+
+
+
+	var eventType = "onpageshow" in window ? "pageshow" : "load";
+	jQuery(window).on(eventType, function() {
+
+
+
+	lcs_do();
+
+
+		try{
+			initMa();
+		}catch(e){}
+	});
+	</script>
+
+</body>
+</html>

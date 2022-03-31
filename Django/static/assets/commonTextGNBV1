@@ -1,0 +1,85 @@
+//
+// 네이트 & 싸이월드 공통
+//  - 이름 UI TextGNB
+//
+// SK Communications Co., Ltd.
+//
+
+var _NATE_SCRIPT_DATA = {
+	fileVer: '',
+	isNate: true,
+	isJqueryDown: true,
+	isLiveKeyword: true,
+	isWebNateOn: true,
+	isDisplayLogin: true,
+	isDisplayName: true,
+	isReplyExists: false,
+	isGiftExists: false,	
+	isPrivate: true,
+	isRefresh: false,
+	isHttpsBrowser: true,
+	qrType: 'nate',
+	typeCharset: 'KR',
+    
+	URL: {
+		LOGIN: '',
+		LOGOUT: '',
+		CSS: ''
+	},
+	
+	setURL : function() {
+		var strProtocol = "http://";
+				
+		if(this.isHTTPS){
+			strProtocol = "https://";
+		}
+		
+		this.URL.LOGIN     	= strProtocol + 'xo.nate.com/Login.sk?redirect=';
+		this.URL.LOGOUT  	= strProtocol + 'xo.nate.com/logout.jsp?redirect=' + strProtocol + 'www.nate.com/%3Ff%3Dlogout';
+		this.URL.CSS     	= strProtocol + 'common.nate.com/css/common/SvcCommon_2020.css?v=2020120301';
+	},
+
+	domain 		: '',
+	reqUrl 		: document.URL,
+	getDomain 	: function() {
+		if (this.domain.length == 0) {
+			var pattern = new RegExp("(\\w+):\/\/([\\w.-]+)\\/?\\S*", "i");
+			pattern.exec(this.reqUrl);
+			this.domain = (RegExp.$2).toLowerCase();
+		}
+		return this.domain;
+	},
+	
+	gnbStyle:null,
+	gnbColor: '',
+	gnbColorOver: '',
+	
+	myLogin: false,
+	myType: 'none',
+	myCmnId: '',
+	myTId: '',
+	myMasterId: '',
+	myBlogId: '',
+	
+	myCmnIdEnc: '',
+	myTIdEnc: '',
+	myCustTpCd: '',
+	myNateCorp: false,
+
+	loginId: null,
+	nateId: null,
+	cyworldId: null,
+	name: null,
+	WIM: '',
+	
+	isCallConnect: false,
+	isHTTPS: true    
+};
+
+_NATE_SCRIPT_DATA.setURL();
+
+document.write('<link href="'+_NATE_SCRIPT_DATA.URL.CSS+'"  rel="stylesheet" type="text/css" />');
+
+function getSvc() {return '';}
+function getType() {return '';}
+document.write('<script type="text/javascript" src="https://common.nate.com/js/CommonTextGNB_v20200305.js?ver=20211229_1" charset="utf-8"><\/script>'); 

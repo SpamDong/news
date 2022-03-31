@@ -1,0 +1,290 @@
+@charset "euc-kr";
+
+/* 서비스별 설정 **/
+/* body { margin:0; color:#5A5A5A; font:normal 9pt AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", helvetica,"Apple SD Gothic Neo",sans-serif; text-align:center; } */
+#header ol, #header ul, #header li, #header dl, #header dt, #header dd { list-style:none; }
+#header ul, #header ol, #header li, #header dl, #header dt, #header dd, #header form, #header p, #header h1, #header h2, #header h3, #header h4, #header h5, #header h6, #header blockquote { margin:0; padding:0; }
+#header { position:relative; color:#5A5A5A; font-weight:normal; font-size:9pt; text-align:left; } /* height:171px; */
+
+/********** SNB 영역 **********/ /* 2010-10-27 */
+#header { position:relative; text-align:left; z-index:1000;} /* modify z-index:1000; */
+
+#header h2 { position:absolute; top:33px; left:87px; background-image:url('../../../../images/snb/h2_title_1105.gif'); background-repeat:no-repeat; text-indent:-1000em; } /* 2010-11-05 */
+#header h2 a { display:block; width:39px; height:20px; overflow:hidden; }
+#header h2.news{width:39px; height:21px; background-position:left top;}
+#header h2.sports{width:59px; height:18px; background-position:left -61px;}
+#header h2.sports a{width:59px;}
+#header h2.entertainment{width:39px; height:21px; background-position:left -31px;}
+#header h2.weather{width:36px; height:20px; background-position:left -89px;}
+
+#header .subsectionTitle{position:absolute; top:31px; left:145px;}
+#header .sportsTitPd{left:165px;} /* 스포츠일경우 중복 class */
+#header .subsectionTitle li {float:left; text-indent:-1000em; margin:5px 0 0 0; padding:0 11px 0 8px; background:url('../../../../images/snb/bg_dot_type1.gif') no-repeat right 5px;}
+#header .subsectionTitle li a{overflow:hidden; display:block; background-image:url('../../../../images/snb/h2_sub_title_vote2017.gif'); background-repeat:no-repeat;}
+#header .subsectionTitle li.s_news a{width:28px; height:15px; background-position:left top;}
+#header .subsectionTitle li.s_sports a{width:41px; height:13px; background-position:left -47px;}
+#header .subsectionTitle li.s_enter a{width:27px; height:15px; background-position:left -16px;}
+#header .subsectionTitle li.s_pann a{width:14px; height:14px; background-position:left -32px;}
+#header .subsectionTitle li.s_vote2016 a{width:46px; height:15px; background-position:left -93px;}
+#header .subsectionTitle li.s_vote2017 a{width:50px; height:18px; background-position:left -109px;position: relative;top: -2px;}
+#header .subsectionTitle li.s_weather{margin:0; text-indent:0; background:none; font-weight:normal; font-size: 11px; font-family: AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", helvetica,"Apple SD Gothic Neo",sans-serif; color:#6f6e6e;}
+#header .subsectionTitle li.s_weather a{background:none;}
+#header .subsectionTitle li.s_wt a {width:28px; background-position:left -77px;height: 14px;overflow: hidden;}
+#header .subsectionTitle li.s_style a {width:43px; height:16px; background-position:left -61px;}
+#header .subsectionTitle li.s_asian a {width:87px; height:16px; background-position:left -94px;}
+#header .subsectionTitle li.s_brazil {margin-top:3px;}
+#header .subsectionTitle li.s_brazil a {width:85px; height:16px; background-position:left -111px;}
+#header .subsectionTitle li.s_weather a:link, #header .subsectionTitle li.s_weather a:hover, #header .subsectionTitle li.s_weather a:active, #header .subsectionTitle li.s_weather a:visited{color:#6f6e6e !important; text-decoration:none !important;}
+#header .subsectionTitle li.s_weather a img{ vertical-align:middle;}
+#header .subsectionTitle li.s_weather em{font-size:7.5pt; font-family: Verdana;}
+#header .weatherBox{position:absolute; top:36px; left:144px;}
+#header #searchWrap fieldset legend {display:none;}
+#header #searchWrap fieldset {border:0; margin:0; padding:0;}
+#header #searchWrap input, #header #searchWrap button{border: 0;outline: 0}
+
+#acWrap { position:relative; float:right; height:100%; *height:25px;} /* 2011-07-08 */
+#acWrap #acDiv { display:none; clear:both; float:left; position:absolute; top:25px; left:0; margin-top:-1px; z-index:3; }
+#acWrap #acDiv iframe { width:100%; height:100%; }
+#acWrap #acImg { visibility:visible; position:absolute; top:3px !important; right:42px; width:20px; height:21px; margin-right:6px; cursor:pointer; text-align:center; }
+#acWrap #acImg img { margin:8px 0 0; }
+
+/* 배너 영역 */
+#header .promotionSpot { position:absolute; top:25px; right:0; }
+#header .promotionSpot a img { border:none; display:block; }
+#header .weather_wrap { position:absolute; top:105px; right:0; float:right; background:transparent; }
+#header .weather_wrap p { float:left; padding:10px 0 0 0; font-size:11px; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", helvetica,"Apple SD Gothic Neo",sans-serif; color:#c7deff; letter-spacing:-1px; }
+#header .weather_wrap p a, #header .weather_wrap p a:visited, #header .weather_wrap p a:hover { text-decoration:none; color:#c7deff !important }
+#header .weather_wrap p a span { color:#F9FFE0 !important; }
+#header .weather_wrap p a em { font-size:7.5pt; font-family: Verdana; }
+
+/* SNB */
+#header .secNaviWrap { position:absolute; left:0; top:72px; width:100%; height:38px; }
+#header .secNaviWrap .weather_breaking {position:absolute; left:649px; top:12px; height:13px; padding-left:52px; font-size:11px; font-weight:bold; background:url("../../../../images/snb/text_weather_breaking.gif") no-repeat 0 0;}
+#header .secNaviWrap .hotBanner{position:absolute; right:0; top:-16px;}
+#header .secNaviWrap .hotBanner img{font-size:0; line-height:0; float:left; display:block;}
+#header .secNaviWrap .adBannerIn{position:absolute; right:7px; bottom:-1px; _bottom:3px; height:34px; vertical-align:middle;}
+#header .secNaviWrap .adBanner{position:absolute; right:-97px; bottom:-1px; _bottom:3px; height:34px; vertical-align:middle;} /* 2010-12-14 */
+/*#header .secNaviWrap .adBanner .test2010{display:block; margin:11px 0 0 0; width:75px; height:12px; background:url('../../../../images/snb/img_banner_2010test.gif') no-repeat left top; text-indent:-9999em;}*/
+#header .secNaviWrap .adBannerIn img, #header .secNaviWrap .adBanner img{vertical-align:middle;}
+/* 2010-11-30 */
+/* 뉴스 SNB */
+.newIcon { position:absolute; left:24px; top:-18px; } /* 뉴스톡 개선 */
+
+.newsSecnavi{width:100%; height:34px; border-top:1px solid #c1c4cf; border-bottom:3px solid #3a4461;}
+.newsSecnavi li{position:relative; float:left; height:34px;}  /* 뉴스톡 개선 */
+.newsSecnavi li a{width:auto; display:block; height:34px; text-indent:-9999em; overflow:hidden; background:url('../../../../images/snb/snb_news_20130715.gif') no-repeat left top;}
+.newsSecnavi li.news01 a{width:31px; background-position:left 11px; }
+.newsSecnavi li.news02 a{width:63px; background-position:-32px 11px;}
+.newsSecnavi li.news03 a{width:42px; background-position:-95px 11px;}
+.newsSecnavi li.news04 a{width:42px; background-position:-137px 11px;}
+.newsSecnavi li.news05 a{width:42px; background-position:-179px 11px;}
+.newsSecnavi li.news06 a{width:42px; background-position:-221px 11px;}
+.newsSecnavi li.news07 a{width:57px; background-position:-264px 11px;}
+.newsSecnavi li.news08 a{width:42px; background-position:-320px 11px;}
+.newsSecnavi li.news09 a{width:43px; background-position:-362px 11px;}
+.newsSecnavi li.news10 a{width:35px; background-position:-405px 11px;}
+.newsSecnavi li.news11 a{width:54px; background-position:-440px 11px;}
+.newsSecnavi li.news12 a{width:64px; background-position:-494px 11px;}
+.newsSecnavi li.news13 a{width:76px; background-position:-558px 11px;}
+.newsSecnavi li.news14 a{width:94px; background-position:-635px 11px;}
+.newsSecnavi li.news15 a{width:60px; background-position:-757px 11px;}
+
+.newsSecnavi li a.select{width:31px; background-image:url('../../../../images/snb/snb_news_20130715.gif'); background-repeat:no-repeat;}
+.newsSecnavi li.news01 a.select{width:31px; background-position:left -24px; }
+.newsSecnavi li.news02 a.select{width:63px; background-position:-32px -24px;}
+.newsSecnavi li.news03 a.select{width:42px; background-position:-95px -24px;}
+.newsSecnavi li.news04 a.select{width:42px; background-position:-137px -24px;}
+.newsSecnavi li.news05 a.select{width:42px; background-position:-179px -24px;}
+.newsSecnavi li.news06 a.select{width:42px; background-position:-221px -24px;}
+.newsSecnavi li.news07 a.select{width:57px; background-position:-264px -24px;}
+.newsSecnavi li.news08 a.select{width:42px; background-position:-320px -24px;}
+.newsSecnavi li.news09 a.select{width:43px; background-position:-362px -24px;}
+.newsSecnavi li.news10 a.select{width:35px; background-position:-405px -24px;}
+.newsSecnavi li.news11 a.select{width:54px; background-position:-440px -24px;}
+.newsSecnavi li.news12 a.select{width:64px; background-position:-494px -24px;}
+.newsSecnavi li.news13 a.select{width:77px; background-position:-558px -24px;}
+.newsSecnavi li.news14 a.select{width:94px; background-position:-635px -24px;}
+.newsSecnavi li.news15 a.select{width:60px; background-position:-757px -24px;}
+
+/* 스포츠 SNB */
+.sportsSecnavi{width:100%; height:34px; border-top:1px solid #abb9d2; border-bottom:3px solid #4170c4;}
+.sportsSecnavi li .liveIcon{position:absolute; left:10px; top:11px;}
+.sportsSecnavi li{position:relative; float:left; height:34px;}
+.sportsSecnavi li a{display:block; height:34px; text-indent:-9999em; overflow:hidden; background:url('../../../../images/snb/snb_sports_20130312.gif') no-repeat left 11px;} /* 2010-12-15 */
+.sportsSecnavi li.sports01 a{width:32px; background-position:left 11px; }
+.sportsSecnavi li.sports02 a{width:40px; background-position:-32px 11px;}
+.sportsSecnavi li.sports03 a{width:62px; background-position:-72px 11px;}
+.sportsSecnavi li.sports04 a{width:41px; background-position:-134px 11px;}
+.sportsSecnavi li.sports05 a{width:63px; background-position:-175px 11px;}
+.sportsSecnavi li.sports06 a{width:69px; background-position:-238px 11px;}
+.sportsSecnavi li.sports07 a{width:42px; background-position:-307px 11px;}
+.sportsSecnavi li.sports08 a{width:62px; background-position:-349px 11px;}
+.sportsSecnavi li.sports09 a{width:73px; background-position:-411px 11px;}
+.sportsSecnavi li.sports10 a{width:63px; background-position:-516px 11px; margin:0 0 0 35px; }
+.sportsSecnavi li.sports11 a{width:63px; background-position:-579px 11px; }
+.sportsSecnavi li.sports12 a{width:63px; background-position:-642px 11px; }
+/*.sportsSecnavi li.sports_skwin{width:86px; padding:0 0 0 10px; background:url('../../../../images/snb/bg_snb_bar.gif') no-repeat left top;}
+.sportsSecnavi li.sports_skwin a{width:68px; background:url('../../../../images/snb/img_sports_skwin.gif') no-repeat left top;}*/
+
+.sportsSecnavi li a.select{width:31px; background-image:url('../../../../images/snb/snb_sports_20130312.gif'); background-repeat:no-repeat;} /* 2010-12-15 */
+.sportsSecnavi li.sports01 a.select{width:32px; background-position:left -24px; }
+.sportsSecnavi li.sports02 a.select{width:40px; background-position:-32px -24px;}
+.sportsSecnavi li.sports03 a.select{width:62px; background-position:-72px -24px;}
+.sportsSecnavi li.sports04 a.select{width:41px; background-position:-134px -24px;}
+.sportsSecnavi li.sports05 a.select{width:63px; background-position:-175px -24px;}
+.sportsSecnavi li.sports06 a.select{width:69px; background-position:-238px -24px;}
+.sportsSecnavi li.sports07 a.select{width:42px; background-position:-307px -24px;}
+.sportsSecnavi li.sports08 a.select{width:62px; background-position:-349px -24px;}
+.sportsSecnavi li.sports09 a.select{width:73px; background-position:-411px -24px;}
+.sportsSecnavi li.sports10 a.select{width:63px; background-position:-516px -24px;} /* 2010-12-15 */
+.sportsSecnavi li.sports11 a.select{width:63px; background-position:-579px -24px;} /* 2010-12-15 */
+.sportsSecnavi li.sports12 a.select{width:63px; background-position:-642px -24px;} /* 2010-12-15 */
+
+/* 연예 SNB */
+.enterSecnavi{width:100%; height:34px; border-top:1px solid #e1c3d2; border-bottom:3px solid #dc5d97;}
+.enterSecnavi li{position:relative; float:left; height:34px;}
+.enterSecnavi li .new {position:absolute; left:50%; top:-6px; display:block; width:12px; height:13px; margin-left:-6px; background:url("../../../../images/icon/ico_snb_new.gif") no-repeat 0 0; text-indent:-9999px; font-size:0;}
+/* UIDEV446 */
+.enterSecnavi li a{display:block; height:34px; text-indent:-9999em; overflow:hidden; background:url('../../../../images/snb/snb_entertainment_20160711.gif') no-repeat left 11px;}
+.enterSecnavi li.enter01 a{width:31px; background-position:left 11px; }
+.enterSecnavi li.enter02 a{width:73px; background-position:-31px 11px;}
+.enterSecnavi li.enter03 a{width:67px; background-position:-104px 11px;}
+.enterSecnavi li.enter04 a{width:43px; background-position:-171px 11px;}
+.enterSecnavi li.enter05 a{width:63px; background-position:-214px 11px;}
+.enterSecnavi li.enter06 a{width:49px; background-position:-277px 11px;}
+.enterSecnavi li.enter07 a{width:62px; background-position:-326px 11px;}
+.enterSecnavi li.enter08 a{width:76px; background-position:-388px 11px;}
+.enterSecnavi li.enter_daejong{width:83px; padding:0 0 0 10px !important; background:url('../../../../images/snb/bg_snb_bar.gif') no-repeat left 11px;}
+.enterSecnavi li.enter_daejong a{width:66px; background:url('../../../../images/snb/img_enter_daejong.gif') no-repeat left 11px;}
+/* UIDEV446 */
+.enterSecnavi li a.select{width:31px; background-image:url('../../../../images/snb/snb_entertainment_20160711.gif'); background-repeat:no-repeat;}
+.enterSecnavi li.enter01 a.select{width:31px; background-position:left -24px;}
+.enterSecnavi li.enter02 a.select{width:73px; background-position:-31px -24px;}
+.enterSecnavi li.enter03 a.select{width:67px; background-position:-104px -24px;}
+.enterSecnavi li.enter04 a.select{width:43px; background-position:-171px -24px;}
+.enterSecnavi li.enter05 a.select{width:63px; background-position:-214px -24px;}
+.enterSecnavi li.enter06 a.select{width:49px; background-position:-277px -24px;}
+.enterSecnavi li.enter07 a.select{width:62px; background-position:-326px -24px;}
+.enterSecnavi li.enter08 a.select{width:76px; background-position:-388px -24px;}
+
+/* 날씨 SNB */
+.weatherSecnavi{width:100%; height:25px; padding:0 0 9px 0 !important; border-top:1px solid #c1c4cf; border-bottom:3px solid #3a4461; *padding:0;}
+.weatherSecnavi li{float:left; height:34px;}
+.weatherSecnavi li a{display:block; height:34px;text-indent:-9999em; overflow:hidden; background:url('../../../../images/snb/snb_weather_201405.gif') no-repeat left 12px;}
+.weatherSecnavi li.weather01 a{width:61px; background-position:left 12px; }
+.weatherSecnavi li.weather02 a{width:88px; background-position:-61px 12px;}
+.weatherSecnavi li.weather03 a{width:61px; background-position:-149px 12px;}
+.weatherSecnavi li.weather04 a{width:61px; background-position:-210px 12px;}
+.weatherSecnavi li.weather05 a{width:98px; background-position:-271px 12px;}
+.weatherSecnavi li.weather06 a{width:62px; background-position:-370px 12px;}
+
+.weatherSecnavi li a.select{width:31px; background-image:url('../../../../images/snb/snb_weather_201405.gif'); background-repeat:no-repeat;}
+.weatherSecnavi li.weather01 a.select{width:61px; background-position:left -24px; }
+.weatherSecnavi li.weather02 a.select{width:88px; background-position:-61px -24px;}
+.weatherSecnavi li.weather03 a.select{width:61px; background-position:-149px -24px;}
+.weatherSecnavi li.weather04 a.select{width:61px; background-position:-210px -24px;}
+.weatherSecnavi li.weather05 a.select{width:98px; background-position:-271px -24px;}
+.weatherSecnavi li.weather06 a.select{width:62px; background-position:-370px -24px;}
+
+
+/* 뉴스 공통 */
+.section_news #header .secNaviWrap li.news_home dd, .section_sports #header .secNaviWrap li.news_sports dd, .section_enter #header .secNaviWrap li.news_ent dd, .section_plus #header .secNaviWrap li.news_plus dd,
+.section_weather #header .secNaviWrap li.news_weather dd,
+.sports_section #header .secNaviWrap li.news_sports dd { display:block; }
+.section_sports #header .secNaviWrap li.news_home dd, .section_enter #header .secNaviWrap li.news_home dd, .section_plus #header .secNaviWrap li.news_home dd,
+.section_weather #header .secNaviWrap li.news_home dd,
+.sports_section #header .secNaviWrap li.news_home dd { display:none; }
+
+/* 뉴스홈 */
+#header .secNaviWrap ul li.news_home { width:56px; }
+#header .secNaviWrap ul li.news_home dt a { width:40px; margin-left:0; background-position:0 -10px; }
+#header .secNaviWrap ul li.news_home dt a:hover { background-position:0 -37px; }
+.section_news #header .secNaviWrap ul li.news_home dt a,
+.section_news #header .secNaviWrap ul li.news_home dt a:hover { width:44px; margin-left:0; background-position:0 -65px; }
+.section_news #header .secNaviWrap .otherLink { background-position:left top; }
+.section_news #header .secNaviWrap .otherLink span { position:absolute; width:51px; margin:0 -2px 0 0; padding-right:0; background:url('../../../../images/snb/bg_otherSvc2.gif') no-repeat right top; text-indent:0; }
+/* 스포츠 : sports_section 으로 사용되는건 프리미어리그를 위한 구분자 */
+#header .secNaviWrap ul li.news_sports { width:70px; }
+#header .secNaviWrap ul li.news_sports dt a { width:40px; background-position:-69px -10px; }
+#header .secNaviWrap ul li.news_sports dt a:hover { background-position:-69px -37px; }
+.section_sports #header .secNaviWrap ul li.news_sports dt a,
+.section_sports #header .secNaviWrap ul li.news_sports dt a:hover,
+.sports_section #header .secNaviWrap ul li.news_sports dt a,
+.sports_section #header .secNaviWrap ul li.news_sports dt a:hover { width:44px; margin-left:12px; background-position:-68px -64px; }
+.section_sports #header .secNaviWrap .otherLink,
+.sports_section #header .secNaviWrap .otherLink { background-position:left -30px; }
+.section_sports #header .secNaviWrap .otherLink span,
+.sports_section #header .secNaviWrap .otherLink span { position:absolute; width:58px; margin:0 -2px 0 0; padding-right:0; background:url('../../../../images/snb/bg_otherSvc2.gif') no-repeat right -30px; text-indent:0; }
+.section_sports #header .secNaviWrap .otherLink span.event,
+.sports_section #header .secNaviWrap .otherLink span.event { width:54px; }
+.section_sports #header .secNaviWrap .otherLink em,
+.sports_section #header .secNaviWrap .otherLink em { color:#343844; }
+.section_sports #header .secNaviWrap .otherLink span img.new,
+.sports_section #header .secNaviWrap .otherLink span img.new { position:absolute; top:0; margin:0 0 0 4px; }
+/* 스포츠 VOD 추가 2010-10-15 */
+#header .secNaviWrap ul li.news_sports .vodLink{overflow:hidden; padding:0 0 0 55px; _height:20px; background:url('../../../../images/sports/icn_snb_vod.gif') no-repeat 23px top;}
+#header .secNaviWrap ul li.news_sports .vodLink a:link,
+#header .secNaviWrap ul li.news_sports .vodLink a:hover,
+#header .secNaviWrap ul li.news_sports .vodLink a:active,
+#header .secNaviWrap ul li.news_sports .vodLink a:visited{color:#98acc7 !important;}
+#header .secNaviWrap ul li.news_sports .vodLink span{color:#50545d; background:none; display:block; float:left; height:20px; margin-right:9px; text-indent:9px; width:11px;}
+/* //스포츠 VOD 추가 2010-10-15 */
+/* 연예 */
+#header .secNaviWrap ul li.news_ent { width:55px; }
+#header .secNaviWrap ul li.news_ent dt a { width:25px; background-position:-140px -10px; }
+#header .secNaviWrap ul li.news_ent dt a:hover { background-position:-140px -37px; }
+.section_enter #header .secNaviWrap ul li.news_ent dt a,
+.section_enter #header .secNaviWrap ul li.news_ent dt a:hover { width:28px; margin-left:13px; background-position:-139px -64px; }
+.section_enter #header .secNaviWrap .otherLink { background-position:left -60px; }
+.section_enter #header .secNaviWrap .otherLink span { position:absolute; width:55px; margin:0 -2px 0 0; padding-right:0; background:url('../../../../images/snb/bg_otherSvc2.gif') no-repeat right -60px; text-indent:0; }
+
+/* 플러스 */
+#header .secNaviWrap ul li.news_plus { width:70px; }
+#header .secNaviWrap ul li.news_plus dt a { width:39px; background-position:-196px -10px; }
+#header .secNaviWrap ul li.news_plus dt a:hover { background-position:-196px -37px; }
+.section_plus #header .secNaviWrap ul li.news_plus dt a,
+.section_plus #header .secNaviWrap ul li.news_plus dt a:hover { width:44px; margin-left:13px; background-position:-194px -64px; }
+
+/* 날씨 */
+.section_weather #header { height:147px; } /* 2010.04.05 전체 snb 높이 변경으로 수정 타 섹션 snb +5px */
+#header .secNaviWrap ul li.news_weather { width:54px; }
+#header .secNaviWrap ul li.news_weather dt a { width:25px; background-position: -266px -10px;}
+#header .secNaviWrap ul li.news_weather dt a:hover { background-position: -266px -37px; }
+.section_weather #header .secNaviWrap ul li.news_weather dl dt a,
+.section_weather #header .secNaviWrap ul li.news_weather dl dt a:hover { width:27px; margin-left:14px; background-position:-265px -64px; }
+.section_weather #header #searchWrap fieldset input.searchBox { width:180px; height:21px; }
+
+/* footer */
+#footer div, #footer dl, #footer dt, #footer dd, #footer p, #footer span, #footer a  { padding:0; margin:0 auto; font-family: AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", helvetica,"Apple SD Gothic Neo",sans-serif; font-size:12px; color:#444; letter-spacing:0; }
+#footer { border-top:2px solid #e4e4e4; clear:both; float:left; margin:0 auto; width:100%; padding:0 0 50px 0; text-align:center; } /* position:relative; */ /* 2010-08-30 */
+#footer dl.footer_main { padding:15px 0 10px 0; width:100%; }
+#footer	dl.footer_main dt { display:none; }
+#footer	dl.footer_main dd a { font-size:11px; letter-spacing:-1px; text-decoration:none; }
+#footer dl.footer_main dd a:hover { text-decoration:underline; }
+#footer	dl.footer_main dd a strong { font-size:11px; }
+#footer	dl.footer_main dd span { padding:0 3px; color:#e9e9e9; }
+
+#footer	dl.footer_list { padding:15px 0 10px 0; width:100%; }
+#footer	dl.footer_list dt { display:none; }
+#footer	dl.footer_list dd a { letter-spacing:-1px; text-decoration:none; }
+#footer	dl.footer_list dd a:hover { text-decoration:underline; }
+#footer	dl.footer_list dd span { padding:0 5px; color:#e9e9e9; }
+
+#footer	p.copyright { float:left; width:100%; font-family: Verdana; font-size:9px; }
+#footer p.copyright a { text-decoration:none; color:#f60;}
+#footer p.copyright a:hover { text-decoration:none; }
+#footer	p.copyright strong { font-family: Verdana; font-size:10px; font-weight:bold; color:#f60; }
+#footer	p.copyright strong span.sk { font-family:Verdana; font-size:10px; color:#ff2400; }
+
+#footer	p.copyright span.family_site { padding:0 0 0 15px; font-family:AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", helvetica,"Apple SD Gothic Neo",sans-serif; font-size:11px; color:#444; font-weight:normal; }
+#footer	p.copyright span.family_site a { text-decoration:none; font-size:11px; color:#444; }
+#footer	p.copyright span.family_site a:hover { text-decoration:underline; font-size:11px;}
+#footer	p.copyright span.family_site span.title { font-family:Verdana; font-size:9px; }
+#footer	p.copyright span.family_site span.bar { color:#e9e9e9; padding:0 2px; }
+
+#footer	p.alert_right { padding:5px 0 10px 0; font-size:11px; color:#888; line-height:15px; letter-spacing:-1px; }
+
+#footer	p.cp_address { padding:0 0 10px 0; font-size:11px; color:#888; line-height:14px; }
+#footer	p.cp_address span { color:#e9e9e9; height:10px; }
+#footer	p.cp_address a { color:#888; text-decoration:underline; }
+#footer	p.cp_address a:hover { color:#444; }

@@ -1,0 +1,165 @@
+@charset "euc-kr";
+
+/* hide 대체 class가 있는 서비스는 대체가능 */
+.hide { overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px; }
+
+/* header **/
+/* #header > 시사/연예 헤더가 970 중앙 정렬 고정됨, 수정할려했으나 기존 스타일이 충돌이 커서 다른 서비스도 970으로 고정 */
+#header { position:relative; width:970px; margin: 0 auto;font-family: "Malgun Gothic", "맑은 고딕", -apple-system, BlinkMacSystemFont, helvetica, "Apple SD Gothic Neo", sans-serif;}
+#header .svcWrap { border-bottom:1px solid #eee; }
+#header .gnbWrap { position:relative; width:970px; height:76px; margin:0 auto; padding-top:55px; }
+#header .gnbWrap h1 { float:left; }
+#header .gnbWrap .natebi { position:relative; top:9px; float:left; width:57px; height:17px; background:url('../../../images/common/set_snb_v3x2.png') 0 0 no-repeat; text-indent:-9999em; overflow:hidden; background-size:300px auto; }
+#header .gnbWrap .svcname { position:relative; top:5px; float:left; width:56px; height:28px; margin-left:12px; background:url('../../../images/common/set_snb_v3x2.png') 0 -20px no-repeat; text-indent:-9999em; overflow:hidden; background-size:300px auto; }
+#header.sports .gnbWrap .svcname{width: 85px;background-position: -110px -20px;}
+#header.ent .gnbWrap .svcname{width: 55px;background-position: -200px -20px;}
+#header.weather .gnbWrap .svcname{width: 53px;height: 29px;background-position: -200px -61px;}
+
+#header .gnbWrap #searchWrap { position:relative; top:-6px; float:left; width:469px; height:44px; margin-left:22px; border:1px solid #ff2c2e; border-top-right-radius: 12px; box-sizing: border-box; } /*position:absolute; top: 49px; left:150px;*/
+#header .gnbWrap #searchWrap .srchform { position:relative; z-index: 9; }
+#header .gnbWrap #searchWrap .searchBox { width:400px; height:20px; margin: 0;padding: 11px 0 11px 18px; line-height:20px; letter-spacing: -0.45px; border:0; font-size:18px; font-weight:bold; color:#000; z-index:9; box-sizing: content-box;-webkit-appearance:none;appearance:none}
+#header .gnbWrap #searchWrap .searchBtn { position:absolute; top: 1px; right:8px; width:42px; height:40px; border:0; background:url('../../../images/common/set_snb_v3x2.png') 0 -50px no-repeat; cursor:pointer; background-size:300px auto; }
+
+#header #searchWrap #selectTxt { position:absolute; left:10px; float:left; display:inline; width:60px; height:20px; padding:1px 0 0 0; border:0; color:#555; font-size:14px; letter-spacing:-1px; cursor:pointer; }
+#header #searchWrap #selectTxt:before { content:''; position: absolute; top:8px; right:0; width:12px; height:7px; background:url('../../../images/common/set_snb_v3x2.png') -88px 0 no-repeat; background-size:300px auto; }
+#header #searchWrap #selectTxt.tap:before { background-position:-88PX -36px; }
+#header #searchWrap #search_layer { position:absolute; top:27px; left:-1px; width:80px; padding:11px 0 14px 0; border:1px solid #ff2c2e; overflow:hidden; }
+#header #searchWrap #search_layer .select_list { background:#fff; }
+#header #searchWrap #search_layer .select_list li { width:73px; height:26px; padding:0 0 0 15px; line-height:26px; background:#fff; color:#555; font-size:14px; cursor:pointer; }
+#header #searchWrap #search_layer .select_list li a:hover { color:#ff2c2e; text-decoration: none; }
+#header .gnbWrap #searchWrap .svcselect + .searchBox { width:124px; margin: 0 0 0 85px; }
+
+#header .gnbWrap .relsvc { position:relative; top:10px; float:right; margin-left:19px; }
+#header .gnbWrap .relsvc li { float:left; padding-right:15px; }
+#header .gnbWrap .relsvc li a { display:block; height:17px; background:url('../../../images/common/set_snb_v3x2.png') 0 -20px no-repeat; text-indent:-9999em; overflow:hidden; background-size:300px auto; -webkit-background-size:300px auto;}
+#header .gnbWrap .relsvc li.svc0 a { width:31px; background-position:-85px -90px; }
+#header .gnbWrap .relsvc li.svc1 a { width:48px; background-position:0 -90px; }
+#header .gnbWrap .relsvc li.svc2 a { width:30px; background-position:-50px -90px; }
+#header .gnbWrap .relsvc li.svc3 a { width:15px; background-position:-50px -110px; }
+#header .gnbWrap .relsvc li.svc4 a { width:30px; background-position:0 -110px; }
+#header .navWrap {position: relative; border-bottom:1px solid #999; }
+#header .snbArea { position:relative; width:970px; margin:0 auto; height:54px; }
+#header .snbArea li { float:left; margin:0 24px 0 0; }
+#header .snbArea li:first-child a{padding: 0 5px;}
+#header .snbArea li a { position:relative; display:block; height:54px; line-height:54px; font-size:15px; color:#000 !important; letter-spacing:-1px;text-decoration: none;}
+#header .snbArea li a:hover { color:#ff2c2e !important; }
+#header .snbArea li a:hover:before { content:''; position:absolute; left:0; bottom:-1px; width:100%; height:2px; background-color:#ff2c2e  }
+#header .snbArea li.on a { font-weight:bold; color:#ff2c2e !important;}
+#header .snbArea li.on a:before { content:''; position:absolute; left:0; bottom:-1px; width:100%; height:2px; background-color:#ff2c2e; }
+
+#header .snbArea .svcLink { position:absolute; top:0; right:0; }
+#header .snbArea .svcLink img { display:block; }
+
+#header .lnbWrap {position: relative; width:970px; height:50px; margin:0 auto; border-bottom:1px solid #dfdedc; }
+#header .lnbWrap li { float:left; margin:0 20px 0 0; }
+#header .lnbWrap li a { position:relative; display:block; height:50px; line-height:50px; font-size:14px; color:#454545 !important; letter-spacing:-1px; }
+#header .lnbWrap li a:hover, #header .lnbWrap li.on a { font-weight:bold; color: #454545 !important; text-decoration: none;}
+#header .lnbWrap li.on a:before, #header .lnbWrap li a:hover:before { content:''; position:absolute; left:0; top:35px; width:100%; height:1px; background-color:#454545; }
+/* 스포츠 SNB색상 변경 */
+#header.sports .snbArea li a:hover,
+#header.sports .snbArea li.on a { color: #496ed2 !important;}
+#header .lnbWrap .hotIssue2,
+#header .navWrap .hotIssue{position: absolute;right: 0;top: 0;font-size: 0;text-align: right;overflow: hidden;}
+#header .navWrap .hotIssue{height: 55px;}
+#header .lnbWrap .hotIssue2{height: 50px;}
+#header.sports .snbArea li a:hover:before,
+#header.sports .snbArea li.on a:before{background-color: #496ed2 !important;}
+/* 연예 SNB색상 변경 */
+#header.ent .snbArea li a:hover, #header.ent .snbArea li.on a {color: #eb399d !important;}
+#header.ent .snbArea li a:hover:before,
+#header.ent .snbArea li.on a:before{ background-color: #eb399d !important;}
+/* SNB > 날씨 특보 */
+#header .weather_breaking{position: absolute;right: 0;top: 0;font-size: 0;}
+#header .weather_breaking .subj{color: #ff2c2e;font-weight: bold;margin-right: 10px}
+#header .weather_breaking .subj, #header .weather_breaking a{display: inline-block;height: 54px;line-height: 54px;font-size: 12px;vertical-align: top;}
+#header .weather_breaking a{max-width: 240px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+/* guide read me
+
+1. image 사용
+- background image는 retina용으로 2배 이미지 1벌 사용해주세요.
+- background-size는 서비스에 맞게 이미지를 고친 후 수정해야합니다.
+- 연관 서비스가 없을 경우 필요없는 이미지는 삭제하고 사용해주세요.
+
+2. svc width 수정
+- #header .gnbArea , #header .snbArea , #header .lnbWrap 의 width값은 서비스 레이아웃 width값에 맞게 수정해주셔야 합니다. ( 가이드는 width:970px; 기준 )
+
+3. property 수정
+- #header .gnbArea .svcname { 서비스명에 맞게 width height } 수정
+- 3depth menu 하단 #header .lnbWrap { border } 는 서비스에 맡게 삭제 및 수정
+
+*/
+/* TEXT GNB 컬러 조정 */
+#gnbList .wrap p.common a.sitemap:hover,
+#textGNB p.nateLink .main_nate:hover,
+#textGNB .personalInfo #directLink .myMenu ul li a:hover,
+#textGNB .personalInfo #directLink .myMenu ul li a:visited{color: #000 !important;}
+#textGNB .personalInfo ul.svc_new li.svc_nateon a:hover span.name,
+#textGNB .gnbmenu .moreList a:hover,
+#textGNB .gnbmenu .nate ul li a:hover{color: #999 !important;}
+#textGNB #gnbList .wrap ul li a:hover{color: #f6685e !important;}
+.sp-img{display: inline-block;background-image:url('../../../images/common/set_snb_v3x2.png') ;background-repeat: no-repeat;background-size: 300px auto;vertical-align: top;}
+/* 핫이슈, 기사뷰 클러스터 및 + TV모듈 */
+.tv-cluster{position: relative;border: 1px solid #dfdfdf;border-radius: 8px;padding-left:16px;line-height: 1;}
+.tv-cluster .home-link{ font-size: 12px;color: #333;margin-left: 12px;font-weight: normal;}
+.tv-cluster .home-link:hover{ color: #333 !important; text-decoration: none; }
+.tv-cluster .home-link .sp-img{width: 11px;height: 11px;margin-right: 3px;position: relative;top: 2px;background-position: -135px 0}
+.tv-cluster .tit{font-size: 15px;line-height: 1.3;letter-spacing: -0.94px;margin: 0;padding: 20px 0 12px;color: #333;font-weight: bold;}
+.tv-cluster .tit .subj{display: inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 55%;vertical-align: middle;}
+.tv-cluster .img{ position: relative;display: block;}
+.tv-cluster .img:before{content: '';position: absolute;width: 139px;height: 78px;border: 1px solid #000;z-index: 2;opacity: .3;}
+.tv-cluster .img img{display: block;width: 141px;height: 80px;}
+.tv-cluster .img .v-time{ position: absolute;right: 0;bottom: 0;display: block;width: 34px;height: 16px;line-height: 16px;text-align: center;background-color: rgba(0, 0, 0, 0.6);color: #fff;background-image: none;font-size:11px;}
+.tv-cluster .item-wrap, .tv-cluster .item-list{ margin: 0; padding: 0; list-style: none;}
+.tv-cluster .item-wrap{overflow: hidden;width: 590px;}
+.tv-cluster .item-list{ float: left;width:141px;margin-left: 8px;padding-bottom: 24px;}
+.tv-cluster .item-list:first-child{ margin-left: 0;}
+.tv-cluster .item-link{ display: block;}
+.tv-cluster .item-link:hover{ color: #222 !important; text-decoration: none;}
+.tv-cluster .item-link:hover .desc{ text-decoration: underline;}
+.tv-cluster .state{ font-size: 0;color: #999;margin-left: 2px;}
+.tv-cluster .cnt, .tv-cluster .times{ font-size: 11px; }
+.tv-cluster .cnt .sp-img{margin-top: 1px;margin-right: 3px;width: 8px;height: 10px;background-position: -120px 0;}
+.tv-cluster .div{width: 1px;height: 9px;display: inline-block;vertical-align: top;;background-color: #dfdfdf;margin: 1px 6px 0 6px;}
+.tv-cluster .desc{width: 137px;max-height: 36px;line-height: 1.38;letter-spacing: -0.8px;color: #222222;margin: 8px 2px;display: -webkit-box;overflow: hidden;text-overflow: ellipsis;word-break: break-all;-webkit-box-orient: vertical;-webkit-line-clamp: 2;font-size: 13px;}
+.tv-cluster .btn-more{position: absolute;right: 13px;top: 23px;font-size: 12px;font-weight: normal;letter-spacing: -0.7px;color: #777777;}
+.tv-cluster .btn-more:hover{text-decoration: none;color: #777 !important;}
+.tv-cluster .btn-more .sp-img{position: relative;top: 2px;width: 6px;height: 10px;margin-left: 3px;background-position: -150px 0}
+/* 클러스터 모듈 뒤에 tv모듈 나올때 여백 조정 */
+.cluster_basic + .tv-cluster{ margin-top: 15px;}
+.clusterType1 + .tv-cluster,
+.clusterType3 + .tv-cluster,
+.clusterType4 +.tv-cluster,
+.clusterType8 + .tv-cluster,
+.clusterType2 + .tv-cluster{ margin-top: 20px; }
+.clusterType6 + .tv-cluster{ margin-top: 10px;}
+#newsContents .newsPhotoHome > .homePhotoListWrap:first-child{ margin-top: -6px}
+#newsContents > .bigIssue:first-child{margin-top: -18px}
+#contentsWraper.search-result-wrap {margin-top: 0;}
+/* 스포츠 클러스터 */
+.tvSetCluster .mduWrap + .tv-cluster,
+.tvSetCluster .mduplist + .tv-cluster{
+    margin-top: 15px;}
+/* 스포츠 컨텐츠에 따라 여백조정 */
+#cntArea .subMain:first-child{padding-top: 0;}
+#container .liveGall{position: relative;margin-top: -21px;}
+/* 연예 */
+.section_enter .newsPhotoHome .photoSlideList2{margin-top: -17px;}
+/* 시사 우측 라인 */
+.section_news #contentsWraper:before{content: '';display: block;width: 320px;position: absolute;right: 0;top: 0;height: 1px;background-color: #dfdedc;}
+.tvLivenavi + hr + #contentsWraper:before,
+.tvLivenavi + script + hr + #contentsWraper:before{display: none;}
+/* 날씨 */
+.section_news .weather + hr + #contentsWraper{margin-top: 0;}
+.section_news .weather + hr + #contentsWraper:before{top: -1px;}
+.section_news .weather + #mediaSubnav + hr + #contentsWraper{margin-top: 1px;}
+.section_news .weather + #mediaSubnav + hr + #contentsWraper:before{display: none;}
+.section_news .weather + hr + #contentsWraper #articleView{padding-top: 18px;}
+
+
+
+@media \0screen {
+    .sp-img,
+    #header .gnbWrap .natebi, #header .gnbWrap .svcname, #header .gnbWrap .relsvc li a, #header .gnbWrap #searchWrap .searchBtn, #header #searchWrap #selectTxt:before  {
+        background-image: url('../../../images/common/set_snb_v3.png');
+    }
+}

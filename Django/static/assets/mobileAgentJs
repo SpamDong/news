@@ -1,0 +1,240 @@
+//<![CDATA[
+	var patterns = [{"is_exact":"N","user_agent":[{"value":"AppleWebKit","is_exclude":"N"},{"value":"iPhone","is_exclude":"N"}]},{"is_exact":"N","user_agent":[{"value":"Android","is_exclude":"N"},{"value":"AppleWebKit","is_exclude":"N"},{"value":"SHW-M380S","is_exclude":"Y"},{"value":"SHW-M380K","is_exclude":"Y"},{"value":"SHW-M380W","is_exclude":"Y"},{"value":"SHW-M305W","is_exclude":"Y"},{"value":"SHV-E140S","is_exclude":"Y"},{"value":"SHV-E140K","is_exclude":"Y"},{"value":"SHV-E140L","is_exclude":"Y"},{"value":"SHV-E150S","is_exclude":"Y"},{"value":"GT-P5100","is_exclude":"Y"},{"value":"GT-P6800","is_exclude":"Y"},{"value":"SHW-M480S","is_exclude":"Y"},{"value":"SHW-M480K","is_exclude":"Y"},{"value":"SHW-M480W","is_exclude":"Y"},{"value":"SHV-E230S","is_exclude":"Y"},{"value":"SHV-E230K","is_exclude":"Y"},{"value":"SM-T700","is_exclude":"Y"},{"value":"SM-T701","is_exclude":"Y"},{"value":"SM-T705","is_exclude":"Y"},{"value":"SM-T800","is_exclude":"Y"},{"value":"SM-T801","is_exclude":"Y"},{"value":"SM-T805","is_exclude":"Y"}]},{"is_exact":"N","user_agent":[{"value":"Opera","is_exclude":"N"},{"value":"Mini","is_exclude":"N"}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M495\\\/\\(null\\)HI4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M715\\\/1\\.0 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 8\\.12; MSIEMobile 6\\.0\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M710\\\/1\\.0 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 8\\.12; MSIEMobile 6\\.0\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M710\\\/\\(null\\)ID4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M490\\\/\\(null\\)IC4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M490\\\/\\(null\\)IG4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M490\\\/\\(null\\)HK4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M490\\\/\\(null\\)IG4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M490\\\/\\(null\\)HL4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M490\\\/\\(null\\)IC4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M495\\\/\\(null\\)HI4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-M720\\\/\\(null\\)ID4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SPH-M7200\\\/\\(null\\)ID4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"Mozilla\\\/4\\.0 \\(compatible; MSIE 7\\.0; Windows NT 5\\.2; 800\\*480;WV02\\.00\\.01;;lgtelecom;EB10-20091226-XXXXXXXXX;SPH-M7350;0; \\.NET CLR 1\\.1\\.4322; \\.NET CLR 2\\.0\\.50727; \\.NET CLR 3\\.0\\.4506\\.2152; \\.NET CLR 3\\.5\\.30729\\) SAMSUNG-SPH-M7350\\\/\\(null\\)ID4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SPH-M8400\\\/\\(null\\)ID4 \\(compatible; MSIE 6\\.0; Windows CE; PPC\\) Opera 9\\.5","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"Mozilla\\\/4\\.0 \\(compatible; MSIE 6\\.0; Windows CE; PPC; 320x320\\) Opera 8\\.65 \\[ko\\]","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SCH-E201\\\/\\(null\\)HI4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"N","user_agent":[{"value":"BlackBerry 9900","is_exclude":"N"},{"value":"AppleWebKit","is_exclude":"N"}]},{"is_exact":"Y","user_agent":[{"value":"SAMSUNG-SHV-E210\\\/\\(null\\)HI4 \\(compatible; MSIE 6\\.0; Windows CE; IEMobile 7\\.11\\)","is_exclude":""}]},{"is_exact":"Y","user_agent":[{"value":"Tizen","is_exclude":""}]}];
+
+	function isMobileAgent() {
+		var result = false;
+		var this_useragent = navigator.userAgent;
+//this_useragent = 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_2 like Mac OS X; ko-kr) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7D11 Safari/528.16';
+
+		for (var i=0; i<patterns.length; i++) {
+			var pattern = patterns[i];
+			var is_exact = pattern.is_exact;
+			var user_agent = pattern.user_agent;
+
+			if ( is_exact == 'Y' ) {
+			var regex = new RegExp( '^'+user_agent[0].value+'$' );
+			
+				if ( regex.test(this_useragent) == true ) {
+					result = true;
+				} else {
+					//alert('notmatch:'+regex.source);
+				}
+			} else {
+				var tmp_result = true;
+
+				for (var j=0; j<user_agent.length; j++) {
+					var regex = new RegExp( user_agent[j].value );
+					if ( regex.test(this_useragent) == true ) {
+						if ( user_agent[j].is_exclude == 'N' ) {
+							tmp_result &= true;
+						} else {
+							tmp_result &= false;
+							break;
+						}
+					} else {
+						if ( user_agent[j].is_exclude == 'Y' ) {
+							tmp_result &= true;
+						} else {
+							tmp_result &= false;
+							break;
+						}
+					}
+				}
+				result = tmp_result;
+			}
+
+			if ( result == true ) {
+				break;
+			}
+		}
+		return result;
+	}
+
+	function adjustViewport() {
+		var vp = document.getElementById("viewport");
+		if ( vp ) {
+			vp.setAttribute("content", "user-scalable=yes, initial-scale = 1.0, width=400", false); 
+		} else {
+			return false;
+		}
+		return true;
+	}
+
+	function appendMobileHomeBtn() {
+		var ga = document.getElementById("gnbArea");
+		if ( ga ) {
+			ga.innerHTML += '<a href="//m.news.nate.com" style="position:absolute; left:60px; top:5px;z-index:9999999;"><img src="//nimg.nate.com/ui/uidev/images/button/btn_mobileweb.png" alt="모바일웹 보기" /></a>';
+		} else {
+			return false;
+		}
+
+		return true;
+	}
+
+	function appendMobileBtn() {
+		var this_useragent = navigator.userAgent.toUpperCase();
+		var elemDiv = document.getElementById('settring_mobile_view');
+		var isiPad = false;
+		if ( this_useragent.indexOf("IPAD") != -1 ) {
+			isiPad = true;
+		} else if ( isMobileAgent() || this_useragent.indexOf("SHW-M180") != -1 ) {
+			// 
+		} else {
+			return true;
+		}
+
+		if ( elemDiv ) { 
+			if ( isiPad ) {
+				elemDiv.className = 'setting_moblie';
+			}
+			elemDiv.style.display = '';
+			return true;
+		}
+		return false;
+	}
+
+	var mobile_btn_done = false;
+	var mobile_btn_try = 0;
+	function showMobileBtn() {
+		// 50회(5초) 까지만 재시도
+		if ( mobile_btn_try >= 50 ) {
+			mobile_btn_done = true;
+			return;
+		}
+
+		if ( mobile_btn_done == false ) {
+			mobile_btn_done = appendMobileBtn();
+			mobile_btn_try++;
+			window.setTimeout(showMobileBtn, 100);
+		} else {
+			mobile_btn_done = true;
+			return;
+		}
+	}
+	
+	function mainRedirectMobile() {
+		if ( isMobileAgent() && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com');
+		}
+	}
+
+	function viewRedirectMobile(mobilecp, artcsq, viewParam) {
+		if ( isMobileAgent() && mobilecp == '1' && checkHold() != true ) {
+			var goUrl = '//m.news.nate.com/view/' + artcsq;
+			if (viewParam != undefined) {
+				goUrl += viewParam;
+			}
+			self.location.replace(goUrl);
+		}
+	}
+
+	function viewRedirectMobileCmt(mobilecp, artcsq, cmtSq) {
+		if ( isMobileAgent() && mobilecp == '1' && checkHold() != true ) {
+			self.location.replace('//m.comm.news.nate.com/Comment/ArticleComment/ReplyList?artc_sq=' + artcsq + '&cmt_sq=' + cmtSq);
+		}
+	}
+
+	function viewRedirectMobileBoard(postsq,grpcd) {
+		if ( isMobileAgent() && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/teampage/view?post_sq=' + postsq + '&bbs_grp_cd='+grpcd + '&f=recent');
+		}
+	}
+	
+	function viewRedirectMobileCeleb(postsq) {
+		if ( isMobileAgent() && checkHold() != true ) {
+			self.location.replace('//m.comm.news.nate.com/celebrity/celebView?post_sq=' + postsq);
+		}
+	}
+	
+	function mainRedirectMobileRadio(cpcd) {
+		if ( isMobileAgent() && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/radio?tab=' + cpcd);
+		}
+	}
+	
+	function viewRedirectMobileRadio(mobilecp, artcsq) {
+		if ( isMobileAgent() && mobilecp == '1' && checkHold() != true ) {
+			self.location.replace('//m.comm.news.nate.com/radio/view?artc_sq=' + artcsq);
+		}
+	}
+	
+	function mainRedirectMobileWeather(areaCode) {
+		if ( isMobileAgent()  && checkHold() != true ) {
+			if(areaCode != ''){
+				self.location.replace('//m.weather.nate.com/'+areaCode);
+			}else{
+				self.location.replace('//m.weather.nate.com/');
+			}
+		}
+	}
+	
+	function mainRedirectMobileLiveTv(cpcd) {
+		if ( isMobileAgent() && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/livetv?cp=' + cpcd);
+		}
+	}
+
+	function mainRedirectIdol() {
+		if ( isMobileAgent()  && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/idol24');
+		}
+	}
+	
+	function mainRedirectNateQ(pollSq) {
+		if ( isMobileAgent()  && checkHold() != true ) {
+			self.location.replace('//m.comm.news.nate.com/nateq?poll_sq='+pollSq);
+		}
+	}
+	
+	function mainRedirectNateQAsk() {
+		if ( isMobileAgent()  && checkHold() != true ) {
+			self.location.replace('//m.comm.news.nate.com/nateq/ask');
+		}
+	}
+	
+	function mainRedirectHissue(nIssueSQ) {
+		if ( isMobileAgent()  && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/hissue/list?isq='+nIssueSQ);
+		}
+	}
+	
+	function mainRedirectGroupHissue(isq,sisq,sq) {
+		if ( isMobileAgent()  && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/hissue/GroupList?isq='+isq+'&sisq='+sisq+'&sq='+sq);	//
+		}
+	}
+	
+	
+	/*
+	 * (NEWS-5161) 유선 포토 뷰어 리다이렉트	
+	 */
+	function photoViewerRedirectMobile(clstId, section) {
+		if ( isMobileAgent() && checkHold() != true ) {
+			self.location.replace('//m.news.nate.com/photoSlide/view?clstId=' + clstId + '&section=' + section);
+		}
+	}
+
+	function checkHold() {
+		var hold=GetCookie('HOLDPC');
+		if ( hold == '1' ) {
+			return true;
+		}
+		return false;
+	}
+
+	// 유선 페이지 떠난 후 5초 후 쿠키 만료 되도록 설정
+	function holdPCVersion() {
+		if ( isMobileAgent() ) {
+			var domain = '.news.nate.com';
+			var exp_time = new Date(); exp_time.setTime(exp_time.getTime() + 5*1000 );
+
+			// 1초마다 재설정
+			setCookie('HOLDPC', '1', exp_time, '/', domain);
+
+			window.setTimeout(holdPCVersion, 1000);
+		}
+	}
+
+	//window.setTimeout(showMobileBtn, 100);
+	window.setTimeout(holdPCVersion, 1000);
+//]]>
