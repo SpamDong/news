@@ -8,7 +8,13 @@
 + 네이버 뉴스에서 실시간, 대용량 데이터를 수집/처리/시각화 프로젝트
 + 네이버 뉴스에서 키워드에 맞게 원하는 정보 수집
 + 그 정보를 토대로 분야 별로 분류하고 사용자들이 어떤 정보를 더 보는지 확인
-+ 팀원:안현동, 유재중, 임홍인, 송화랑
+<br>
+
++ **역할 분담**
++ 임홍인 Kubernetes, Containerd, Elasticsearch, Kibana
++ 유재중 Kubernetes, Docker, Prometheus, Grafana
++ 안현동 Crawler, Fluentd, Kafka 
++ 송화랑 Django, Spark, Zeppelin
 
 <br>
 
@@ -74,9 +80,11 @@
   + EFK(elasticsearch + fluentd + kibana)
   + Kafka
   + Prometheus&grafana 
-  + RealTime Crawling
+  + Real-Time Crawling
+  + Real-Time Storage
+  + Real-Time Processing
   + Git 관리   
-  + 
+   
 <br>
 
   ## **시스템 흐름도**
@@ -103,15 +111,6 @@
     +  Kubernetes 아래 모든 Pods의 정보를 Prometheus에서 받고 상태를 Grafana로 시각화
   <br><br>
   
-  ## **시스템 흐름도**
-  ![Team2 구성도02](https://user-images.githubusercontent.com/96184680/160989594-d9668050-a350-4fdc-ad97-fc9f4d98c7ee.png)
-  
-  
-  ## **파이프라인 구조**
-
-
-  
-  <br><br>
   
   ### **프로젝트 진행 과정 중 핵심 문제점과 해결방법**
   
