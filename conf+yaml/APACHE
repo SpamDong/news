@@ -1,0 +1,29 @@
+/etc/apache2/sites-enabled/000-default.conf
+
+LoadModule wsgi_module "/usr/local/lib/python3.6/dist-packages/mod_wsgi/server/mod_wsgi-py36.cpython-36m-x86_64-linux-gnu.so"
+WSGIPythonHome "/usr"
+
+WSGIScriptAlias / "/var/www/html/News_web/config/wsgi.py"
+
+WSGIPythonPath "/var/www/html/News_web"
+
+
+<Directory "/var/www/html/News_web/config">
+        <Files wsgi.py>
+                Require all granted
+        </Files>
+</Directory>
+
+
+
+Alias /static/ /var/www/html/News_web/static/
+
+<Directory /var/www/html/News_web/static/>
+        Require all granted
+</Directory>
+
+Alias /media/ /var/www/html/News_web/media/
+
+<Directory /var/www/html/News_web/media/>
+        Require all granted
+</Directory>
