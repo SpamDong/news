@@ -1,0 +1,84 @@
+import requests
+from bs4 import BeautifulSoup
+from kafka import KafkaProducer
+import time
+from json import dumps
+
+
+
+
+news_url_numbers = ['437','020','016','057','028','005','023','032','214','366','277','448','079','088','449']
+# news_url_numbers = ['421','056','025','003','055','047','052','001','015','215','422','469','081','018','014','022']
+
+# 각 16개 총 32개
+
+producer = KafkaProducer(
+    acks=0,
+    compression_type='gzip',
+    bootstrap_servers=['125.133.75.24:33149'],
+    value_serializer=lambda v: dumps(v).encode('utf-8'),
+)
+
+news_type_numbers = ['154', '100', '101', '102', '103', '104']
+news_type = ['대선', '정치', '경제', '사회', '생활', '세계']
+remove_text = '''.,'"“”‘’[]?!'''
+space_text = '·…'
+title_list = ['' for num in range(0,15)]
+
+
+while True:
+
+    start = time.time()
+
+    for news_url_number in news_url_numbers:
+        news_type_num = 0
+        for news_type_number in news_type_numbers:
+            response = requests.get('https://media.naver.com/press/' + news_url_number + '?sid=' + news_type_number)
+
+            if response.status_code == 200:
+                # time.sleep(0.5)
+                html = response.text
+                soup = BeautifulSoup(html, 'html.parser')
+
+                news_titles = soup.select('.press_edit_news_title')
+                news_times = soup.select('.r_ico_b.r_modify ')
+                news_urls = soup.select('.press_edit_news_link._es_pc_link')
+                news_company = soup.select('.press_hd_name_link')[0].text.strip()
+
+                for i in range(0, 2):
+                    try:
+                        news_title = news_titles[i].text
+                        news_url = news_urls[i].attrs['href']
+                        news_time = news_times[i].text
+                    except:
+                        continue
+
+                    if news_url.split('/')[5][:-8] in title_list:
+                        continue
+
+                    if '시간전' in news_time or '일전' in  news_time or '2022' in  news_time:
+                        continue
+
+                    if int(news_time.split('분전')[0]) < 2:  # 몇분전 데이터를 >가져올 것인지
+                        del title_list[0]
+                        title_list.append(news_url.split('/')[5][:-8])
+                        # print(title_list)
+
+                        for remove in remove_text:
+                            news_title = news_title.replace(remove, '')
+                        for space in space_text:
+                            news_title = news_title.replace(space, ' ')
+
+                        # print(news_title, news_url, news_time, news_company, news_type[news_type_num])
+                        # print('***\n')
+
+                        producer.send('news', {
+                            'title': news_title,
+                            'news_company': news_company,
+                            'news_url': news_url,
+                            'news_type': news_type[news_type_num],
+                        })
+                        producer.flush()
+            news_type_num += 1
+
+    print("time :", time.time() - start)
