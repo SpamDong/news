@@ -19,6 +19,9 @@
 <br>
 
 ## **클러스터 환경**
+
+![image](https://user-images.githubusercontent.com/96184680/162097044-6005c354-1a24-4c81-9ba1-643b174590bf.png)
+
 + Cpu i7, Ram 16g, Hdd 500g x 4 PC(Total Cpu:32 Core, Ram:64g, hdd:2TB)
 
 ## **개발환경**
