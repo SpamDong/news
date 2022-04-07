@@ -1,0 +1,12 @@
+apt update
+apt install openjdk-8-jdk
+apt-get update
+apt-get install apache2 apache2-dev libapache2-mod-wsgi-py3 python3-pip libmysqlclient-dev libjpeg-dev
+
+pip3 install django
+pip3 install mod_wsgi
+pip3 install mysqlclient
+pip3 install pillow
+pip3 install kafka-python
+pip install elasticsearch
+pip install requests
