@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka2
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: kafka2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kafka2
+    spec:
+      containers:
+      - name: kafka2
+        image: cycloid87/jj-kafka:2.1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9093
+          protocol: TCP
+        command: [ "sleep" ]
+        args: [ "infinity" ]
