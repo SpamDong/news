@@ -1,0 +1,11 @@
+/etc/kibana/kibana.yml
+
+
+# Specifies the address to which the Kibana server will bind. IP addresses and host names are both valid values.
+# The default is 'localhost', which usually means remote machines will not be able to connect.
+# To allow connections from remote users, set this parameter to a non-loopback address.
+server.host: "0.0.0.0"
+
+
+# The URLs of the Elasticsearch instances to use for all your queries.
+elasticsearch.hosts: ["http://172.30.1.30:30392"]
