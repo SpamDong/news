@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plz
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: plz
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: plz
+    spec:
+      containers:
+      - name: plz
+        image: cycloid87/jj-elasticsearch:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9200
+          protocol: TCP
+        command: [ "sleep" ]
+        args: [ "infinity" ]
