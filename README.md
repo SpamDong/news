@@ -91,7 +91,7 @@
 <br>
 
   ## **시스템 흐름도**
-  ![Team2 구성도02](https://user-images.githubusercontent.com/96184680/160989594-d9668050-a350-4fdc-ad97-fc9f4d98c7ee.png)
+  ![빅데이터프로젝트구성도최종](https://user-images.githubusercontent.com/96184680/162097110-ed4f9f77-b8f3-4a96-af0d-944991fc6f6a.png)
 
 <br>
   
