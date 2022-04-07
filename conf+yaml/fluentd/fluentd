@@ -1,0 +1,24 @@
+ /etc/td-agent/td-agent.conf
+
+
+<source>
+  @type kafka
+
+  brokers kafka2-59655564bd-cmfjg:9092
+  format json
+  tag news
+
+  <topic>
+    topic news
+  </topic>
+
+</source>
+
+<match news>
+  @type elasticsearch
+  host 182.20.167.56
+  port 9200
+  include_timestamp true
+  index_name news
+  type_name fluentd
+</match>
