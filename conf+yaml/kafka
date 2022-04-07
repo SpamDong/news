@@ -1,0 +1,7 @@
+/opt/kafka/config/server.properties
+
+
+listener.security.protocol.map=EXTERNAL:PLAINTEXT,INTERNAL:PLAINTEXT
+listeners=INTERNAL://kafka2-59655564bd-cmfjg:9092,EXTERNAL://0.0.0.0:9093
+advertised.listeners=INTERNAL://kafka2-59655564bd-cmfjg:9092,EXTERNAL://broker:33149
+inter.broker.listener.name=INTERNAL
