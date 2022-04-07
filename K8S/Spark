@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: spark
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spark
+    spec:
+      containers:
+      - name: spark
+        image: cycloid87/hr-spark:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 4040
+          protocol: TCP
+        command: [ "sleep" ]
+        args: [ "infinity" ]
