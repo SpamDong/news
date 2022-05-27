@@ -129,7 +129,29 @@
    > **문제점2** : 쿠버네티스 네트워크 (아이피 외부 노출)<br>
    > **해결방안** : Pod 환경에서 Kibana 처럼 외부 브라우저를 이용해야 할 경우 아이피를 외부에 노출 시킬 필요가 있었고, AWS EC2와 데이터를 주고 받기 위해서는 포트포워딩 뿐 아니라 Pod 네트워트 문제를 해결해야만 했다. 해당 문제로 많은 시간은 소요하게 되었고, 네트워크 분야가 결코 쉽지 만은 않았다. 하지만  Ingress, service등 쿠버네티스를 공부 하면서 여러가지 방안을 시도해 보았고, 결국 MetalLB를 통해 LoadBalance 타입으로 이를 해결하였다.
        
+   <br><hr>
+   
+안현동
+   >**1. 데이터 파이프라인 구축**<br>
+   > **문제점1** : 약 31개의 신문사에서 7개의 주제의 크롤링하는데 걸리는 시간이 약 350sec가 걸리는 것을 확인
+   ><br>
+   > **해결방안** : 클러스터링과 코드 수정 조치 > 신문사를 15 % 16개로 분산하여 크롤링, Selenium & Requests에서 BeautifulSoup4 & Requests로 변경 및 다중 반복문에 강하고 컴파일러 형식인 PyPy로 코드 실행<br>
+   > ![image](https://user-images.githubusercontent.com/81276472/170607863-496c81a2-ad50-45f7-9676-ebca2370d31c.png)<br><br>
+   >**문제점2** : ES 저장된 데이터를 Web으로 가져올 방법 강구
+   ><br>
+   > **해결방안** : elasticsearch_del API를 사용하여 데이터를 10개씩 로드 <br>
+   > ![image](https://user-images.githubusercontent.com/81276472/170609409-77046671-afef-432b-8352-ea2f82632742.png)
    <br>
+   
+   >**2. 플랫폼**<br>
+   > **문제점1** : Kafka 네트워크 통신<br>
+   > **해결방안** : Kafka는 네트워크 통신의 default 값은 내부서비스만 가능함 > 내부 프로토콜과 외부 프로토콜을 분리하여 외부에서도 서비스를 받을 수 있도록 설정<br>
+```
+listener.security.protocol.map=EXTERNAL:PLAINTEXT,INTERNAL:PLAINTEXT
+listeners= INTERNAL://{사설 IP}:9092, EXTERNAL://0.0.0.0:9093
+advertised.listeners= INTERNAL://{사설 IP or 도메인}::9092, EXTERNAL://{공인 IP or 도메인}:9093
+inter.broker.listener.name=INTERNAL
+```
 
    
 
