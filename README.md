@@ -13,7 +13,7 @@
 + **역할 분담**
 + 임홍인 Kubernetes, Containerd, Elasticsearch, Kibana
 + 유재중 Kubernetes, Docker, Prometheus, Grafana
-+ 안현동 Crawler, Fluentd, Kafka 
++ 안현동 Crawler, Fluentd, Kafka, Django
 + 송화랑 Django, Spark, Zeppelin
 
 <br>
