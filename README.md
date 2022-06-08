@@ -146,6 +146,20 @@
    >**2. 플랫폼**<br>
    > **문제점1** : Kafka 네트워크 통신<br>
    > **해결방안** : Kafka는 네트워크 통신의 default 값은 내부서비스만 가능함 > 내부 프로토콜과 외부 프로토콜을 분리하여 외부에서도 서비스를 받을 수 있도록 설정<br>
+
+   <br><hr>
+
+유재중
+   >**1. Prometheus 와 Grafana의 확장성**<br>
+   > **문제점1** : 
+   ><br>
+   > **해결방안** : 
+   
+   <br>
+   
+   
+       
+   <br><hr>
 ```
 listener.security.protocol.map=EXTERNAL:PLAINTEXT,INTERNAL:PLAINTEXT
 listeners= INTERNAL://{사설 IP}:9092, EXTERNAL://0.0.0.0:9093
